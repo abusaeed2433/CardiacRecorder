@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <!-- date, systolic pressure, diastolic pressure, and heart rate.-->
+
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="03-03-2023"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSysPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate"
+            tools:text="60 mm Hg" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivSysUnusual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_priority_high_24"
+            android:contentDescription="@string/unusual_dys_pressure"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSysPressure"
+            app:layout_constraintStart_toEndOf="@+id/tvSysPressure"
+            app:layout_constraintTop_toTopOf="@+id/tvSysPressure" />
+
+
+        <TextView
+            android:id="@+id/tvDysPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSysPressure"
+            tools:text="70 mm Hg" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/ivDysUnusual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_priority_high_24"
+            android:contentDescription="@string/unusual_dys_pressure"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDysPressure"
+            app:layout_constraintStart_toEndOf="@+id/tvDysPressure"
+            app:layout_constraintTop_toTopOf="@+id/tvDysPressure" />
+
+        <TextView
+            android:id="@+id/tvHeartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSysPressure"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="80 BPM" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+

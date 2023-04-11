@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsPage">
+
+    <LinearLayout
+        android:id="@+id/rlDetailsDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Date:" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/DetailsDate"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            tools:text="03-03-2023" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlDetailsTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsDate">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Time:" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/DetailsTime"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            tools:text="12:04 am" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlDetailsSysPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsTime">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Sys Pressure:" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_marginStart="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/DetailsSysPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textSize="18sp"
+                tools:text="60 mm Hg" />
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/rlSysUnusual"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_priority_high_24"
+                android:contentDescription="@string/unusual_dys_pressure"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlDetailsDysPressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsSysPressure">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Dys Pressure:" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_marginStart="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/DetailsDysPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textSize="18sp"
+                tools:text="70 mm Hg" />
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/rlDysUnusual"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_priority_high_24"
+                android:contentDescription="@string/unusual_dys_pressure"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlDetailsHeartRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsDysPressure">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Heart Rate:" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/DetailsHeartRate"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            tools:text="80 BPM" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rlDetailsComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsHeartRate">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            tools:text="Comment:" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/DetailsComment"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:textSize="18sp"
+            tools:text="abcd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlDetailsComment">
+
+        <TextView
+            android:id="@+id/UpperView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:padding="12dp"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Sys Pressure High" />
+        <TextView
+            android:id="@+id/LowerView"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:padding="10dp"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Dys Pressure Low" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

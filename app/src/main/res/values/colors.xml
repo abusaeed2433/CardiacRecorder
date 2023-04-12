@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="textColor">#414141</color>
+    <color name="hint_tv_color">#345B8A</color>
+
+    <color name="neu_background_main">#f5ffff</color>
+    <color name="neu_top_left_main">#FFFFFF</color>
+    <color name="neu_bottom_right_main">#d0d9d9</color>
+
+
 </resources>

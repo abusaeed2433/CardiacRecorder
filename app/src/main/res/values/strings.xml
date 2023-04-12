@@ -3,4 +3,19 @@
     <string name="no_data_found">No data found</string>
     <string name="add_measurement">add measurement</string>
     <string name="unusual_dys_pressure">Unusual dys pressure</string>
+    <string name="date">Date</string>
+    <string name="date_format">Date (dd/MM/yyyy)</string>
+    <string name="time">Time</string>
+    <string name="time_format">Time (hh:mm)[24]</string>
+    <string name="_60">60</string>
+    <string name="dys_pressure">Dys pressure</string>
+    <string name="dys_pressure_mm_hg">Dys pressure (mm Hg)</string>
+    <string name="sys_pressure_mm_hg">Sys pressure (mm Hg)</string>
+    <string name="heart_rate_bpm">Heart Rate (BPM)</string>
+    <string name="_70">70</string>
+    <string name="comment">Comment</string>
+    <string name="enter_any_message">Enter any message</string>
+    <string name="_22_25">22:25</string>
+    <string name="_10_11_2023">10/11/2023</string>
+    <string name="save">Save</string>
 </resources>

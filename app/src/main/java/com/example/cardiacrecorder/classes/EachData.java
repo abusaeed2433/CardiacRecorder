@@ -3,11 +3,14 @@ package com.example.cardiacrecorder.classes;
 import android.graphics.Color;
 
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
 
+@Entity(tableName = "data_table")
 public class EachData implements Serializable {
 //    date measured (presented in  format)
 //• time measured (presented in hh:mm format)
@@ -16,7 +19,8 @@ public class EachData implements Serializable {
 //• heart rate in beats per minute (non-negative integer)
 //• comment (textual, up to 20 characters)
 
-    private final long timestamp;
+    @PrimaryKey
+    private long timestamp;
 
     @NonNull
     private final String date; //dd-mm-yyyy
@@ -40,6 +44,10 @@ public class EachData implements Serializable {
         this.dysPressure = dysPressure;
         this.heartRate = heartRate;
         this.comment = comment;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
     }
 
     public boolean isSysUnusual(){

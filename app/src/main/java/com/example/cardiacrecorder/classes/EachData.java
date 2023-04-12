@@ -1,5 +1,7 @@
 package com.example.cardiacrecorder.classes;
 
+import android.graphics.Color;
+
 import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.Nullable;
@@ -62,6 +64,18 @@ public class EachData implements Serializable {
         return null;
     }
 
+    public int getSysColor(){
+        if(sysPressure < 90) return Color.BLUE;
+        if(sysPressure > 140) return Color.RED;
+        return Color.BLACK;
+    }
+
+    public int getDysColor(){
+        if(dysPressure < 60) return Color.BLUE;
+        if(dysPressure > 90) return Color.RED;
+        return Color.BLACK;
+    }
+
     public boolean isIdSame(EachData item){
         return timestamp == item.timestamp;
     }
@@ -103,7 +117,7 @@ public class EachData implements Serializable {
     }
 
     public String getFormattedHeartRate(){
-        return heartRate+"\nBPM";
+        return heartRate+"BPM";
     }
 
     public int getHeartRate() {

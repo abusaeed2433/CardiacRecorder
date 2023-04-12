@@ -29,7 +29,7 @@ public class HomePage extends AppCompatActivity {
         list.add(new EachData(1L,"01/02/03","04:04AM",70,20,30,""));
         list.add(new EachData(1L,"05/02/03","03:04AM",80,30,40,"nai"));
         list.add(new EachData(1L,"12/05/03","02:04AM",90,10,50,"c"));
-        list.add(new EachData(1L,"02/02/2023","01:04AM",230,60,70,"c"));
+        list.add(new EachData(1L,"02/02/2023","01:04AM",230,10,70,"c"));
 
         adapter = new RvAdapter(this);
         binding.rvList.setAdapter(adapter);

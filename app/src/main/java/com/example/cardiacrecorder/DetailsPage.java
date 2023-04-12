@@ -41,6 +41,7 @@ public class DetailsPage extends AppCompatActivity {
             binding.ivSysUnusual.setVisibility(View.VISIBLE);
             binding.tvIndicator1.setText(data.getSysStatus());
             binding.tvIndicator1.setVisibility(View.VISIBLE);
+            binding.tvIndicator1.setTextColor(data.getSysColor());
         }
 
         if(data.isDysUnusual()){
@@ -48,10 +49,12 @@ public class DetailsPage extends AppCompatActivity {
 
             if(data.isSysUnusual()){
                 binding.tvIndicator2.setText(data.getDysStatus());
+                binding.tvIndicator2.setTextColor(data.getDysColor());
                 binding.tvIndicator2.setVisibility(View.VISIBLE);
             }
             else{
                 binding.tvIndicator1.setText(data.getDysStatus());
+                binding.tvIndicator1.setTextColor(data.getDysColor());
                 binding.tvIndicator1.setVisibility(View.VISIBLE);
             }
         }

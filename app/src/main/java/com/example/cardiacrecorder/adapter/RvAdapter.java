@@ -1,6 +1,7 @@
 package com.example.cardiacrecorder.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,13 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cardiacrecorder.DetailsPage;
 import com.example.cardiacrecorder.R;
 import com.example.cardiacrecorder.classes.EachData;
 
 public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private EachData curItem;
 
     public RvAdapter(Context mContext) {
@@ -68,7 +70,9 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         }
 
         holder.itemView.setOnClickListener(view -> {
-            //todo handle click here
+            Intent intent = new Intent(mContext,DetailsPage.class);
+            intent.putExtra("data",getItem(holder.getAdapterPosition()));
+            mContext.startActivity(intent);
         });
 
     }

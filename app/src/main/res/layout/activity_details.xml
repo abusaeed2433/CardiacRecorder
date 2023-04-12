@@ -28,7 +28,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Date:" />
+            android:text="Date:" />
         <TextView
             android:layout_marginStart="10dp"
             android:id="@+id/DetailsDate"
@@ -63,7 +63,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Time:" />
+            android:text="Time:" />
         <TextView
             android:layout_marginStart="10dp"
             android:id="@+id/DetailsTime"
@@ -98,7 +98,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Sys Pressure:" />
+            android:text="Sys Pressure:" />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="5"
@@ -112,8 +112,8 @@
                 android:textSize="18sp"
                 tools:text="60 mm Hg" />
             <ImageView
-                android:visibility="visible"
-                android:id="@+id/rlSysUnusual"
+                android:visibility="gone"
+                android:id="@+id/ivSysUnusual"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/icon_priority_high_24"
@@ -145,7 +145,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Dys Pressure:" />
+            android:text="Dys Pressure:" />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="5"
@@ -159,8 +159,8 @@
                 android:textSize="18sp"
                 tools:text="70 mm Hg" />
             <ImageView
-                android:visibility="visible"
-                android:id="@+id/rlDysUnusual"
+                android:visibility="gone"
+                android:id="@+id/ivDysUnusual"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/icon_priority_high_24"
@@ -192,7 +192,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Heart Rate:" />
+            android:text="Heart Rate:" />
         <TextView
             android:layout_marginStart="10dp"
             android:id="@+id/DetailsHeartRate"
@@ -227,7 +227,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAllCaps="true"
-            tools:text="Comment:" />
+            android:text="Comment:" />
         <TextView
             android:layout_marginStart="10dp"
             android:id="@+id/DetailsComment"
@@ -253,7 +253,8 @@
         app:layout_constraintTop_toBottomOf="@+id/rlDetailsComment">
 
         <TextView
-            android:id="@+id/UpperView"
+            android:visibility="gone"
+            android:id="@+id/tvIndicator1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -263,8 +264,10 @@
             android:textSize="18sp"
             android:textStyle="bold"
             tools:text="Sys Pressure High" />
+
         <TextView
-            android:id="@+id/LowerView"
+            android:visibility="gone"
+            android:id="@+id/tvIndicator2"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -276,6 +279,5 @@
             tools:text="Dys Pressure Low" />
     </LinearLayout>
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

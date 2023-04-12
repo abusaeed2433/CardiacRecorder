@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.Nullable;
 
-public class EachData {
+import java.io.Serializable;
+
+public class EachData implements Serializable {
 //    date measured (presented in  format)
 //• time measured (presented in hh:mm format)
 //• systolic pressure in mm Hg (non-negative integer)
@@ -42,8 +44,22 @@ public class EachData {
         return sysPressure<90 || sysPressure>140;
     }
 
+    public String getSysStatus(){
+        if(!isSysUnusual()) return null;
+        if(sysPressure < 90) return "Sys pressure: LOW";
+        if(sysPressure > 140) return "Sys pressure: HIGH";
+        return null;
+    }
+
     public boolean isDysUnusual(){
         return dysPressure < 60 || dysPressure>90;
+    }
+
+    public String getDysStatus(){
+        if(!isDysUnusual()) return null;
+        if(dysPressure < 60) return "Dys pressure: LOW";
+        if(dysPressure > 90) return "Dys pressure: HIGH";
+        return null;
     }
 
     public boolean isIdSame(EachData item){
@@ -72,14 +88,14 @@ public class EachData {
     }
 
     public String getFormattedSysPressure(){
-        return sysPressure+"";
+        return sysPressure+"mm Hg";
     }
     public int getSysPressure() {
         return sysPressure;
     }
 
     public String getFormattedDysPressure(){
-        return dysPressure+"";
+        return dysPressure+"mm Hg";
     }
 
     public int getDysPressure() {
@@ -87,7 +103,7 @@ public class EachData {
     }
 
     public String getFormattedHeartRate(){
-        return heartRate+"";
+        return heartRate+"\nBPM";
     }
 
     public int getHeartRate() {

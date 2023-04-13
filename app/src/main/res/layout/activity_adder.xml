@@ -67,21 +67,19 @@
                     android:textColor="@color/hint_tv_color"
                     android:textStyle="bold" />
 
-
                 <TextView
                     android:id="@+id/editTextTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/shadow_back_down"
-                    android:hint="@string/_22_25"
+                    android:hint="@string/_10_25"
                     android:importantForAutofill="no"
                     android:inputType="none"
                     android:minHeight="45dp"
                     android:padding="8dp"
                     android:textColor="@color/textColor"
                     android:textSize="18sp" />
-
 
                 <TextView
                     android:layout_width="wrap_content"

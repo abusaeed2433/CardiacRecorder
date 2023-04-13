@@ -6,7 +6,7 @@
     <string name="date">Date</string>
     <string name="date_format">Date (dd/MM/yyyy)</string>
     <string name="time">Time</string>
-    <string name="time_format">Time (hh:mm)[24]</string>
+    <string name="time_format">Time (hh:mm:a)</string>
     <string name="_60">60</string>
     <string name="dys_pressure">Dys pressure</string>
     <string name="dys_pressure_mm_hg">Dys pressure (mm Hg)</string>
@@ -15,7 +15,12 @@
     <string name="_70">70</string>
     <string name="comment">Comment</string>
     <string name="enter_any_message">Enter any message</string>
-    <string name="_22_25">22:25</string>
+    <string name="_10_25">10:25PM</string>
     <string name="_10_11_2023">10/11/2023</string>
     <string name="save">Save</string>
+    <string name="more_options">More options</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="int_ph">%1$d</string>
 </resources>

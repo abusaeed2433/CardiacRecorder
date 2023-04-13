@@ -14,6 +14,8 @@ import androidx.fragment.app.DialogFragment;
 import com.example.cardiacrecorder.others.StringListener;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class MyTimePicker extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
     private final StringListener listener;
@@ -40,31 +42,12 @@ public class MyTimePicker extends DialogFragment implements TimePickerDialog.OnT
     @Override
     public void onTimeSet(TimePicker timePicker, int hour, int min) {
 
+        LocalTime localTime = LocalTime.of(hour,min);
+        String pattern = "hh:mma";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
 
-
-        StringBuilder builder = new StringBuilder();
-
-        String apm = "AM";
-        int h = hour;
-        if(hour >= 12){
-            apm = "PM";
-        }
-
-        if(hour == 0) h = 12;
-        else if(hour > 12) h = hour-12;
-
-        if(h < 10) builder.append("0");
-        builder.append(h).append(":");
-
-        if(min < 10) builder.append("0");
-        builder.append(min);
-
-        builder.append(apm);
-
-        listener.onStringSelected(builder.toString());
+        listener.onStringSelected(formatter.format(localTime));
 
     }
-
-
 
 }

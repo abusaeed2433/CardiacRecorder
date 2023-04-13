@@ -4,6 +4,7 @@ import android.graphics.Color;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import org.jetbrains.annotations.Nullable;
@@ -19,8 +20,10 @@ public class EachData implements Serializable {
 //• heart rate in beats per minute (non-negative integer)
 //• comment (textual, up to 20 characters)
 
-    @PrimaryKey
-    private long timestamp;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    private final long timestamp;
 
     @NonNull
     private final String date; //dd-mm-yyyy
@@ -44,6 +47,27 @@ public class EachData implements Serializable {
         this.dysPressure = dysPressure;
         this.heartRate = heartRate;
         this.comment = comment;
+    }
+
+    @Ignore
+    public EachData(int id,long timestamp, @NonNull String date, @NonNull String time, int sysPressure,
+                    int dysPressure, int heartRate, @Nullable String comment) {
+        this.id = id;
+        this.timestamp = timestamp;
+        this.date = date;
+        this.time = time;
+        this.sysPressure = sysPressure;
+        this.dysPressure = dysPressure;
+        this.heartRate = heartRate;
+        this.comment = comment;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     /**

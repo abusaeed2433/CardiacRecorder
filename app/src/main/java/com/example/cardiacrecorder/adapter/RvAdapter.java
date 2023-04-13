@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,11 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cardiacrecorder.DetailsPage;
 import com.example.cardiacrecorder.R;
 import com.example.cardiacrecorder.classes.EachData;
+import com.example.cardiacrecorder.others.PopUpListener;
 
 public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
     private final Context mContext;
     private EachData curItem;
+    private PopUpListener popUpListener = null;
 
     public RvAdapter(Context mContext) {
         super(diffCallback);
@@ -75,11 +78,34 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
             mContext.startActivity(intent);
         });
 
+        holder.ivMore.setOnClickListener(view -> {
+            PopupMenu popupMenu = new PopupMenu(mContext,view);
+            popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
+            popupMenu.setOnMenuItemClickListener(item -> {
+                if(item.getItemId() == R.id.popUpEdit){
+                    if(popUpListener!=null) {
+                        popUpListener.onEditRequest(getItem(holder.getAdapterPosition()));
+                    }
+                    return true;
+                }
+                else if(item.getItemId() == R.id.popUpDelete){
+                    if(popUpListener!=null) {
+                        popUpListener.onDeleteRequest(getItem(holder.getAdapterPosition()));
+                    }
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            });
+            popupMenu.show();
+        });
+
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView tvDate, tvSysPressure, tvDysPressure, tvHeartRate;
-        private final ImageView ivSysUnusual, ivDysUnusual;
+        private final ImageView ivSysUnusual, ivDysUnusual, ivMore;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,7 +115,12 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
             tvHeartRate = itemView.findViewById(R.id.tvHeartRate);
             ivSysUnusual = itemView.findViewById(R.id.ivSysUnusual);
             ivDysUnusual = itemView.findViewById(R.id.ivDysUnusual);
+            ivMore = itemView.findViewById(R.id.ivMore);
         }
+    }
+
+    public void setPopUpListener(PopUpListener popUpListener) {
+        this.popUpListener = popUpListener;
     }
 
 }

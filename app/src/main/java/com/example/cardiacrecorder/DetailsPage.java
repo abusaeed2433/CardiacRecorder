@@ -1,9 +1,12 @@
 package com.example.cardiacrecorder;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.cardiacrecorder.classes.EachData;
@@ -19,7 +22,12 @@ public class DetailsPage extends AppCompatActivity {
         binding = ActivityDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Intent intent = getIntent();
+        ActionBar actionBar = getSupportActionBar();
+
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
 
         EachData eachData = (EachData) getIntent().getSerializableExtra("data");
 
@@ -66,9 +74,18 @@ public class DetailsPage extends AppCompatActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == android.R.id.home){
+            super.onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         binding = null;
     }
 
 }
+

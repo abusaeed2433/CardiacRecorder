@@ -24,7 +24,7 @@ public interface BoardDao {
     @Delete
     void delete(EachData data);
 
-    @Query("SELECT * FROM data_table ORDER BY timeStamp ASC")
+    @Query("SELECT * FROM data_table ORDER BY id ASC")
     LiveData<List<EachData>> getAllData();
 
 }

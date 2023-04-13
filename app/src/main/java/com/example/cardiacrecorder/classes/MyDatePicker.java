@@ -12,6 +12,8 @@ import androidx.fragment.app.DialogFragment;
 import com.example.cardiacrecorder.others.StringListener;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class MyDatePicker extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
@@ -37,15 +39,22 @@ public class MyDatePicker extends DialogFragment implements DatePickerDialog.OnD
 
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-        month++;
-        String d = String.valueOf(day);
-        if(d.length() < 2) d = "0"+d;
 
-        String m = String.valueOf(month);
-        if(m.length() < 2) m = "0"+m;
+        LocalDate localDate = LocalDate.of(year,month+1,day);
+//        month++;
+//        String d = String.valueOf(day);
+//        if(d.length() < 2) d = "0"+d;
+//
+//        String m = String.valueOf(month);
+//        if(m.length() < 2) m = "0"+m;
+//
+//        String date = d+"/"+m+"/"+year;
 
-        String date = d+"/"+m+"/"+year;
-        listener.onStringSelected(date);
+        String pattern = "dd/MM/yyyy";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+
+        listener.onStringSelected(formatter.format(localDate));
+
     }
 
 }

@@ -16,7 +16,6 @@
     <color name="neu_top_left_main">#FFFFFF</color>
     <color name="neu_bottom_right_main">#d0d9d9</color>
 
-    <color name="black_white">#000000</color>
-
+    <color name="black_white">#ffffff</color>
 
 </resources>

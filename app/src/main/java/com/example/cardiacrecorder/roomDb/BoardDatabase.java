@@ -15,6 +15,11 @@ public abstract class BoardDatabase extends RoomDatabase {
     private static BoardDatabase instance;
     public abstract BoardDao boardDao();
 
+    /**
+     * create instance of board database
+     * @param context object
+     * @return Single-tone instance of board database class
+     */
     public static BoardDatabase getInstance(Context context){
 
         if(instance == null){

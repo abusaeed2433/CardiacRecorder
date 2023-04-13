@@ -22,20 +22,36 @@ public class BoardRepository {//Repository Link Notice
         allData = boardDao.getAllData();
     }
 
+    /**
+     * Read all data form Room database
+     * @return All data objects
+     */
     public LiveData<List<EachData>> getAllData() {
         return allData;
     }
 
+    /**
+     * Insert data into Room database
+     * @param data object to be inserted
+     */
     public void insert(EachData data){
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> boardDao.insert(data));
     }
 
+    /**
+     * Update data into Room database
+     * @param data object to be updated
+     */
     public void update(EachData data){
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> boardDao.update(data));
     }
 
+    /**
+     * Delete data from Room database
+     * @param data object to be deleted
+     */
     public void delete(EachData data){
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(() -> boardDao.delete(data));

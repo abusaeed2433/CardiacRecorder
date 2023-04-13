@@ -28,8 +28,6 @@ public class HomePage extends AppCompatActivity {
         binding = ActivityHomepageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-
         initializeRoomRv();
         setClickListener();
         insertDummy();

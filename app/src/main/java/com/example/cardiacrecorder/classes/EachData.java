@@ -50,10 +50,18 @@ public class EachData implements Serializable {
         return timestamp;
     }
 
+    /**
+     *
+     * @return true if <90 || >140
+     */
     public boolean isSysUnusual(){
         return sysPressure<90 || sysPressure>140;
     }
 
+    /**
+     *
+     * @return "Sys pressure: LOW" when pressure < 90 & "Sys pressure:HIGH" when pressure>140
+     */
     public String getSysStatus(){
         if(!isSysUnusual()) return null;
         if(sysPressure < 90) return "Sys pressure: LOW";

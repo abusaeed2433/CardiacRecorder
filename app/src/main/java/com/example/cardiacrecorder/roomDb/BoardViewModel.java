@@ -21,18 +21,34 @@ public class BoardViewModel extends AndroidViewModel {
         allData = repository.getAllData();
     }
 
+    /**
+     * Insert data into Room database
+     * @param data object to be inserted
+     */
     public void insert(EachData data){
         repository.insert(data);
     }
 
+    /**
+     * Update data into Room database
+     * @param data object to be updated
+     */
     public void update(EachData data){
         repository.update(data);
     }
 
+    /**
+     * Delete data from Room database
+     * @param data object to be deleted
+     */
     public void delete(EachData data){
         repository.delete(data);
     }
 
+    /**
+     * Read all data form Room database
+     * @return All data objects
+     */
     public LiveData<List<EachData>> getAllData() {
         return allData;
     }

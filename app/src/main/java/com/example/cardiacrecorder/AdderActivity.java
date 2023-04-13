@@ -30,10 +30,16 @@ public class AdderActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * initializes view model
+     */
     private void startRoom(){
         viewModel = new ViewModelProvider(this).get(BoardViewModel.class);
     }
 
+    /**
+     * set click listener to all views and initializes data and time picker
+     */
     private void setClickListener(){
 
 
@@ -86,6 +92,9 @@ public class AdderActivity extends AppCompatActivity {
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 
+    /**
+     * Clears necessary editTexts
+     */
     private void clearAll(){
         binding.editTextTime.setText(null);
         binding.editTextSysPressure.setText(null);
@@ -95,6 +104,11 @@ public class AdderActivity extends AppCompatActivity {
     }
 
 
+    /**
+     *  Check editText box is empty or not
+     * @param values String array of editText values
+     * @return true if all editTexts are not empty
+     */
     private boolean isValid(String ...values){
         for(String val : values){
             if(val.isEmpty()) return false;

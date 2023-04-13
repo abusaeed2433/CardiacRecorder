@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Entity(tableName = "data_table")
 public class EachData implements Serializable {
-//    date measured (presented in  format)
+//  date measured (presented in  format)
 //• time measured (presented in hh:mm format)
 //• systolic pressure in mm Hg (non-negative integer)
 //• diastolic pressure in mm Hg (non-negative integer)
@@ -46,14 +46,26 @@ public class EachData implements Serializable {
         this.comment = comment;
     }
 
+    /**
+     * primary key timestamp generator
+     * @return timestamp
+     */
     public long getTimestamp() {
         return timestamp;
     }
 
+    /**
+     * checks if Sys Pressure is usual or not
+     * @return true if Sys pressure < 90 or >140
+     */
     public boolean isSysUnusual(){
         return sysPressure<90 || sysPressure>140;
     }
 
+    /**
+     * returns string for pressure status
+     * @return return "Sys Pressure: LOW" if Sys Pressure is < 90 && "Sys Pressure: HIGH" if Sys Pressure is > 140
+     */
     public String getSysStatus(){
         if(!isSysUnusual()) return null;
         if(sysPressure < 90) return "Sys pressure: LOW";
@@ -61,10 +73,18 @@ public class EachData implements Serializable {
         return null;
     }
 
+    /**
+     * checks if Dys Pressure is usual or not
+     * @return true if Dys pressure < 60 or > 90
+     */
     public boolean isDysUnusual(){
         return dysPressure < 60 || dysPressure>90;
     }
 
+    /**
+     * returns string for pressure status
+     * @return return "Dys Pressure: LOW" if Dys Pressure is < 60 && "Dys Pressure: HIGH" if Dys Pressure is > 90
+     */
     public String getDysStatus(){
         if(!isDysUnusual()) return null;
         if(dysPressure < 60) return "Dys pressure: LOW";
@@ -72,22 +92,40 @@ public class EachData implements Serializable {
         return null;
     }
 
+    /**
+     * picks color based on unusual Sys Pressure
+     * @return BLUE if "Sys Pressure < 90" && RED if "Sys Pressure > 140"
+     */
     public int getSysColor(){
         if(sysPressure < 90) return Color.BLUE;
         if(sysPressure > 140) return Color.RED;
         return Color.BLACK;
     }
 
+    /**
+     * picks color based on unusual Dys Pressure
+     * @return BLUE if "Dys Pressure < 60" && RED if "Dys Pressure > 90"
+     */
     public int getDysColor(){
         if(dysPressure < 60) return Color.BLUE;
         if(dysPressure > 90) return Color.RED;
         return Color.BLACK;
     }
 
+    /**
+     * check if two item ids are same
+     * @param item object of new item
+     * @return true if same id
+     */
     public boolean isIdSame(EachData item){
         return timestamp == item.timestamp;
     }
 
+    /**
+     * checks if two objects are totally same
+     * @param item object of new item
+     * @return true if objects are totally same
+     */
     public boolean isFullySame(EachData item){
         boolean commentCheck = (comment == null && item.comment == null);
         if(comment != null){
@@ -109,6 +147,10 @@ public class EachData implements Serializable {
         return time;
     }
 
+    /**
+     * formats Sys Pressure
+     * @return Sys pressure with unit
+     */
     public String getFormattedSysPressure(){
         return sysPressure+"mm Hg";
     }
@@ -116,6 +158,10 @@ public class EachData implements Serializable {
         return sysPressure;
     }
 
+    /**
+     * formats Dys Pressure
+     * @return Dys pressure with unit
+     */
     public String getFormattedDysPressure(){
         return dysPressure+"mm Hg";
     }
@@ -124,6 +170,10 @@ public class EachData implements Serializable {
         return dysPressure;
     }
 
+    /**
+     * formats Heart Rate
+     * @return Heart Rate with unit
+     */
     public String getFormattedHeartRate(){
         return heartRate+"BPM";
     }

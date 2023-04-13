@@ -36,6 +36,9 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    /**
+     * set click listener to buttons
+     */
     private void setClickListener(){
         binding.fabAdd.setOnClickListener(view -> {
             startActivity(new Intent(this,AdderActivity.class));
@@ -44,6 +47,9 @@ public class HomePage extends AppCompatActivity {
     }
 
 
+    /**
+     * initializes room database on recycler view adapter
+     */
     private void initializeRoomRv(){
         adapter = new RvAdapter(this);
         binding.rvList.setAdapter(adapter);
@@ -52,6 +58,9 @@ public class HomePage extends AppCompatActivity {
         viewModel.getAllData().observe(this, allData -> adapter.submitList(allData));
     }
 
+    /**
+     * initializes dummy values
+     */
     private void insertDummy(){
 
         List<EachData> list = new ArrayList<>();

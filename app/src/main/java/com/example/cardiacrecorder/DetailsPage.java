@@ -27,6 +27,10 @@ public class DetailsPage extends AppCompatActivity {
 
     }
 
+    /**
+     * sets data to textViews
+     * @param data class object passed by user
+     */
     private void setData(EachData data){
         if(data == null) return;
 

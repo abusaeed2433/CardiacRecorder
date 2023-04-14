@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="textColor">#414141</color>
+    <color name="text_color">#414141</color>
     <color name="hint_tv_color">#345B8A</color>
 
     <color name="neu_background_main">#f5ffff</color>

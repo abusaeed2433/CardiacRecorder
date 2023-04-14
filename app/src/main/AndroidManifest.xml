@@ -11,25 +11,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CardiacRecorder"
         tools:targetApi="31">
+
         <activity
             android:name=".AdderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
         <activity
             android:name=".FrontPage"
             android:exported="true"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".HomePage"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
         <activity
             android:name=".DetailsPage"
-            android:exported="false"></activity>
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
     </application>
 
 </manifest>

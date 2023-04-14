@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,17 +17,20 @@ public class FrontPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        getSupportActionBar().hide();
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         super.onCreate(savedInstanceState);
         binding = ActivityFrontPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        new Handler(Looper.getMainLooper()).postDelayed(() ->
-                startActivity(new Intent(FrontPage.this,HomePage.class)),3000
-        );
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null) {
+            getSupportActionBar().hide();
+        }
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            startActivity(new Intent(FrontPage.this, HomePage.class));
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+        },1200);
 
     }
 
@@ -35,4 +39,5 @@ public class FrontPage extends AppCompatActivity {
         super.onDestroy();
         binding = null;
     }
+
 }

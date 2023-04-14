@@ -1,15 +1,20 @@
 package com.example.cardiacrecorder.classes;
 
 import android.graphics.Color;
+import android.text.SpannableString;
+import android.text.style.AbsoluteSizeSpan;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.example.cardiacrecorder.R;
+
 import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
+import java.util.concurrent.TimeUnit;
 
 @Entity(tableName = "data_table")
 public class EachData implements Serializable {
@@ -34,9 +39,11 @@ public class EachData implements Serializable {
     private final int sysPressure; // mm Hg - non-negative
     private final int dysPressure; // mm Hg - non-negative
     private final int heartRate; // beats per minute non-negative
-
     @Nullable
     private final String comment;
+
+    @Ignore
+    private transient SpannableString spanSys = null, spanDys = null, spanHeart = null, spanDateTime = null;
 
     public EachData(long timestamp, @NonNull String date, @NonNull String time, int sysPressure,
                     int dysPressure, int heartRate, @Nullable String comment) {
@@ -183,11 +190,118 @@ public class EachData implements Serializable {
     }
 
     /**
+     *
+     * @return formatted String in spannable format
+     */
+    public SpannableString getSpannableSys(){
+
+        if(spanSys != null) return spanSys;
+
+        String sys = String.valueOf(sysPressure);
+        String s = sys+"\nmm Hg";
+
+        spanSys = new SpannableString(s);
+
+        spanSys.setSpan(new AbsoluteSizeSpan(18,true),0,sys.length(),0);
+        spanSys.setSpan(new AbsoluteSizeSpan(14,true),sys.length(),s.length(),0);
+
+        return spanSys;
+    }
+
+
+    /**
+     *
+     * @return background resource for textview based on value
+     */
+    public int getSysBackground(){
+        if(sysPressure < 90) return R.drawable.round_back_down;
+        if(sysPressure < 140) return R.drawable.round_back_normal;
+        return R.drawable.round_back_up;
+    }
+
+    /**
+     *
+     * @return background resource for textview based on value
+     */
+    public int getDysBackground(){
+        if(dysPressure < 60) return R.drawable.round_back_down;
+        if(dysPressure < 90) return R.drawable.round_back_normal;
+        return R.drawable.round_back_up;
+    }
+
+    /**
+     *
+     * @return background resource for textview based on value
+     */
+    public int getHeartBackground(){
+        if(heartRate < 60) return R.drawable.round_back_down;
+        if(heartRate < 100) return R.drawable.round_back_normal;
+        return R.drawable.round_back_up;
+    }
+
+    /**
+     *
+     * @return formatted String in spannable format
+     */
+    public SpannableString getSpannableDys(){
+
+        if(spanDys != null) return spanDys;
+
+        String dys = String.valueOf(dysPressure);
+        String s = dys+"\nmm Hg";
+
+        spanDys = new SpannableString(s);
+
+        spanDys.setSpan(new AbsoluteSizeSpan(18,true),0,dys.length(),0);
+        spanDys.setSpan(new AbsoluteSizeSpan(14,true),dys.length(),s.length(),0);
+
+        return spanDys;
+    }
+
+    /**
+     *
+     * @return formatted String in spannable format
+     */
+    public SpannableString getSpannableHeart(){
+
+        if(spanHeart != null) return spanHeart;
+
+        String sys = String.valueOf(heartRate);
+        String s = sys+"\nBPM";
+
+        spanHeart = new SpannableString(s);
+
+
+        spanHeart.setSpan(new AbsoluteSizeSpan(18,true),sys.length(),s.length(),0);
+        spanHeart.setSpan(new AbsoluteSizeSpan(14,true),sys.length(),s.length(),0);
+        return spanHeart;
+    }
+
+    /**
      * formats Dys Pressure
      * @return Dys pressure with unit
      */
     public String getFormattedDysPressure(){
         return dysPressure+"mm Hg";
+    }
+
+    /**
+     *
+     * @return date, time together, ex: 03/04/2023\n10:10PM
+     */
+    public SpannableString getSpannableDateTime(){
+        if(spanDateTime != null) return spanDateTime;
+
+        String tAgo = getElapsedTime(timestamp,System.currentTimeMillis());
+
+        String s = date+"\n"+tAgo;
+
+        spanDateTime = new SpannableString(s);
+
+        spanDateTime.setSpan(new AbsoluteSizeSpan(14,true),0,date.length(),0);
+        spanDateTime.setSpan(new AbsoluteSizeSpan(12,true),date.length(),s.length(),0);
+
+        return spanDateTime;
     }
 
     public int getDysPressure() {
@@ -209,6 +323,34 @@ public class EachData implements Serializable {
     @Nullable
     public String getComment() {
         return comment;
+    }
+
+    public static String getElapsedTime(long startTime, long endTime) {
+        long duration = endTime - startTime;
+        long days = TimeUnit.MILLISECONDS.toDays(duration);
+        duration -= TimeUnit.DAYS.toMillis(days);
+        long hours = TimeUnit.MILLISECONDS.toHours(duration);
+        duration -= TimeUnit.HOURS.toMillis(hours);
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(duration);
+
+        StringBuilder sb = new StringBuilder();
+        if (days > 0) {
+            sb.append(days);
+            sb.append("d");
+            sb.append(" ");
+        }
+        if (hours > 0) {
+            sb.append(hours);
+            sb.append("h");
+            sb.append(" ");
+        }
+        if (minutes >= 0) {
+            sb.append(minutes);
+            sb.append("m");
+            sb.append(" ");
+        }
+
+        return sb.append("ago").toString();
     }
 
 }

@@ -18,7 +18,6 @@ import com.example.cardiacrecorder.roomDb.BoardViewModel;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.Locale;

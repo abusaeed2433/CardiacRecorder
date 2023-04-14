@@ -45,7 +45,8 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.each_data_layout,parent,false);
+        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.each_data_layout,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.each_data_layout_new,parent,false);
         return new ViewHolder(view);
     }
 
@@ -53,24 +54,14 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         curItem = getItem(position);
 
-        holder.tvDate.setText(curItem.getDate());
-        holder.tvSysPressure.setText(curItem.getFormattedSysPressure());
-        holder.tvDysPressure.setText(curItem.getFormattedDysPressure());
-        holder.tvHeartRate.setText(curItem.getFormattedHeartRate());
+        holder.tvDateTime.setText(curItem.getSpannableDateTime());
+        holder.tvSysPressure.setText(curItem.getSpannableSys());
+        holder.tvDysPressure.setText(curItem.getSpannableDys());
+        holder.tvHeartRate.setText(curItem.getSpannableHeart());
 
-        if(curItem.isSysUnusual()){
-            holder.ivSysUnusual.setVisibility(View.VISIBLE);
-        }
-        else{
-            holder.ivSysUnusual.setVisibility(View.GONE);
-        }
-
-        if(curItem.isDysUnusual()){
-            holder.ivDysUnusual.setVisibility(View.VISIBLE);
-        }
-        else{
-            holder.ivDysUnusual.setVisibility(View.GONE);
-        }
+        holder.tvSysPressure.setBackgroundResource(curItem.getSysBackground());
+        holder.tvDysPressure.setBackgroundResource(curItem.getDysBackground());
+        holder.tvHeartRate.setBackgroundResource(curItem.getHeartBackground());
 
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(mContext,DetailsPage.class);
@@ -104,17 +95,15 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
-        private final TextView tvDate, tvSysPressure, tvDysPressure, tvHeartRate;
-        private final ImageView ivSysUnusual, ivDysUnusual, ivMore;
+        private final TextView tvDateTime, tvSysPressure, tvDysPressure, tvHeartRate;
+        private final ImageView ivMore;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvDate = itemView.findViewById(R.id.tvDate);
+            tvDateTime = itemView.findViewById(R.id.tvDateTime);
             tvSysPressure = itemView.findViewById(R.id.tvSysPressure);
             tvDysPressure = itemView.findViewById(R.id.tvDysPressure);
             tvHeartRate = itemView.findViewById(R.id.tvHeartRate);
-            ivSysUnusual = itemView.findViewById(R.id.ivSysUnusual);
-            ivDysUnusual = itemView.findViewById(R.id.ivDysUnusual);
             ivMore = itemView.findViewById(R.id.ivMore);
         }
     }

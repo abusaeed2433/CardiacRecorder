@@ -23,4 +23,21 @@
     <string name="delete">Delete</string>
     <string name="update">Update</string>
     <string name="int_ph">%1$d</string>
+    <string name="search">Search</string>
+    <string name="dash_only">---</string>
+    <string name="search_keyword">Search key</string>
+    <string name="previous_item">Previous item</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="down_arrow">Down arrow</string>
+    <string name="filter">Filter</string>
+    <string name="click_again_to_exit">Click again to exit</string>
+    <string name="select_type">Select type</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="to_date">To date</string>
+    <string name="from_date">From date</string>
+    <string name="sort_by">Sort By</string>
+    <string name="systolic_pressure">Systolic pressure</string>
+    <string name="dashed_date">--/--/----</string>
+    <string name="heart_rate">Heart Rate</string>
 </resources>

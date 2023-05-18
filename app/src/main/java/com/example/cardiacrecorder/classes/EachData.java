@@ -1,5 +1,10 @@
 package com.example.cardiacrecorder.classes;
 
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.ALL;
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.HIGH;
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.LOW;
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.NORMAL;
+
 import android.graphics.Color;
 import android.text.SpannableString;
 import android.text.style.AbsoluteSizeSpan;
@@ -10,10 +15,15 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.example.cardiacrecorder.R;
+import com.example.cardiacrecorder.viewmodel.FilterViewModel;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 @Entity(tableName = "data_table")
@@ -36,6 +46,8 @@ public class EachData implements Serializable {
     @NonNull
     private final String time; // hh:mma
 
+    @Ignore
+    private final long epochDate;
     private final int sysPressure; // mm Hg - non-negative
     private final int dysPressure; // mm Hg - non-negative
     private final int heartRate; // beats per minute non-negative
@@ -54,6 +66,7 @@ public class EachData implements Serializable {
         this.dysPressure = dysPressure;
         this.heartRate = heartRate;
         this.comment = comment;
+        this.epochDate = getEpochDate(date);
     }
 
     @Ignore
@@ -67,6 +80,46 @@ public class EachData implements Serializable {
         this.dysPressure = dysPressure;
         this.heartRate = heartRate;
         this.comment = comment;
+        this.epochDate = getEpochDate(date);
+    }
+
+    public boolean isThisOK(int sysBy, int dysBy, int heartBy){
+        boolean sys = sysBy == ALL ||
+                (sysBy == LOW && sysPressure < 90) ||
+                (sysBy == HIGH && sysPressure > 140) ||
+                (sysBy == NORMAL && !isSysUnusual());
+
+        boolean dys = dysBy == ALL ||
+                (dysBy == LOW && dysPressure < 60) ||
+                (dysBy == HIGH && dysPressure > 90) ||
+                (dysBy == NORMAL && !isDysUnusual());
+
+        boolean heart = heartBy == ALL ||
+                (heartBy == LOW && heartRate < 60) ||
+                (heartBy == HIGH && heartRate > 100) ||
+                (heartBy == NORMAL && (heartRate >= 60 && heartRate <= 100));
+
+        return sys && dys && heart;
+    }
+
+    public long getEpochDate() {
+        return epochDate;
+    }
+
+    public static long getEpochDate(String date){
+        try{
+            String pattern = "dd/MM/yyyy";
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern, Locale.US);
+
+            TemporalAccessor accessor = formatter.parse(date);
+
+            LocalDate localDate = LocalDate.from(accessor);
+            return localDate.toEpochDay();
+        }
+        catch (Exception ignored){
+            return Long.MIN_VALUE;
+        }
     }
 
     public void setId(int id) {

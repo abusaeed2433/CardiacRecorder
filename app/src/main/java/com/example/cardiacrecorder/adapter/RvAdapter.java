@@ -112,7 +112,7 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         colorCode.add(R.color.light_magenta);
         colorCode.add(R.color.light_blue);
 
-
+        //123
         //Random random = new Random();
         //int number = random.nextInt(colorCode.size());
         //return colorCode.get(number);

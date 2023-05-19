@@ -32,6 +32,9 @@
     <color name="pale_yellow">#FFE8A5</color>
     <color name="light_green">#A5FFC5</color>
     <color name="light_magenta">#FFA5E3</color>
-    
+
+    <color name="teal">#9bd770</color>
+    <color name="red_bg">#f32d17</color>
+    <color name="blue_bg">#3484f0</color>
 
 </resources>

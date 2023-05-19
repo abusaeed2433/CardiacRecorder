@@ -15,7 +15,6 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.example.cardiacrecorder.R;
-import com.example.cardiacrecorder.viewmodel.FilterViewModel;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -152,8 +151,15 @@ public class EachData implements Serializable {
      */
     public String getSysStatus(){
         if(!isSysUnusual()) return null;
-        if(sysPressure < 90) return "Sys pressure: LOW";
-        if(sysPressure > 140) return "Sys pressure: HIGH";
+        if(sysPressure < 90) return "SYS PRESSURE: LOW";
+        if(sysPressure > 140) return "SYS PRESSURE: HIGH";
+        return null;
+    }
+
+    public String getHeartRateStatus(){
+        if(!isHeartRateUnusual()) return null;
+        if(heartRate < 60) return "HEART RATE: LOW";
+        if(heartRate > 100) return "HEART RATE: HIGH";
         return null;
     }
 
@@ -165,19 +171,22 @@ public class EachData implements Serializable {
         return dysPressure < 60 || dysPressure>90;
     }
 
+    public boolean isHeartRateUnusual() {return heartRate < 60 || heartRate > 100; }
+
     /**
      * returns string for pressure status
      * @return return "Dys Pressure: LOW" if Dys Pressure is < 60 && "Dys Pressure: HIGH" if Dys Pressure is > 90
      */
     public String getDysStatus(){
         if(!isDysUnusual()) return null;
-        if(dysPressure < 60) return "Dys pressure: LOW";
-        if(dysPressure > 90) return "Dys pressure: HIGH";
+        if(dysPressure < 60) return "DYS PRESSURE: LOW";
+        if(dysPressure > 90) return "DYS PRESSURE: HIGH";
         return null;
     }
 
     /**
      * picks color based on unusual Sys Pressure
+     *
      * @return BLUE if "Sys Pressure < 90" && RED if "Sys Pressure > 140"
      */
     public int getSysColor(){

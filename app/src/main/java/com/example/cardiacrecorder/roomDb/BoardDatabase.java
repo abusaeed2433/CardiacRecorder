@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.cardiacrecorder.classes.EachData;
 
-@Database(entities = {EachData.class},version = 3)
+@Database(entities = {EachData.class},version = 4)
 public abstract class BoardDatabase extends RoomDatabase {
 
     private static BoardDatabase instance;

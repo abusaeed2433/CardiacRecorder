@@ -5,14 +5,14 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemContainer"
     app:cardCornerRadius="4dp"
     android:layout_margin="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:background="@drawable/shadow_back_down">
+        android:padding="4dp">
 
         <!-- date, systolic pressure, diastolic pressure, and heart rate.-->
 

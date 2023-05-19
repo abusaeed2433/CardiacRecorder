@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,11 +21,16 @@ import com.example.cardiacrecorder.R;
 import com.example.cardiacrecorder.classes.EachData;
 import com.example.cardiacrecorder.others.PopUpListener;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
     private final Context mContext;
     private EachData curItem;
     private PopUpListener popUpListener = null;
+    int curColor = 0;
 
     public RvAdapter(Context mContext) {
         super(diffCallback);
@@ -50,6 +57,7 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         curItem = getItem(position);
@@ -58,6 +66,7 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         holder.tvSysPressure.setText(curItem.getSpannableSys());
         holder.tvDysPressure.setText(curItem.getSpannableDys());
         holder.tvHeartRate.setText(curItem.getSpannableHeart());
+        holder.cardView.setCardBackgroundColor(holder.itemView.getResources().getColor(getBackgroundColor(),null));
 
         holder.tvSysPressure.setBackgroundResource(curItem.getSysBackground());
         holder.tvDysPressure.setBackgroundResource(curItem.getDysBackground());
@@ -94,9 +103,27 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
     }
 
+    private int getBackgroundColor() {
+        List<Integer> colorCode = new ArrayList<>();
+
+        colorCode.add(R.color.light_pink);
+        colorCode.add(R.color.light_green);
+        colorCode.add(R.color.pale_yellow);
+        colorCode.add(R.color.light_magenta);
+        colorCode.add(R.color.light_blue);
+
+
+        //Random random = new Random();
+        //int number = random.nextInt(colorCode.size());
+        //return colorCode.get(number);
+        curColor = (curColor + 1) % colorCode.size();
+        return colorCode.get(curColor);
+    }
+
     static class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView tvDateTime, tvSysPressure, tvDysPressure, tvHeartRate;
         private final ImageView ivMore;
+        CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -105,6 +132,7 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
             tvDysPressure = itemView.findViewById(R.id.tvDysPressure);
             tvHeartRate = itemView.findViewById(R.id.tvHeartRate);
             ivMore = itemView.findViewById(R.id.ivMore);
+            cardView = itemView.findViewById(R.id.itemContainer);
         }
     }
 

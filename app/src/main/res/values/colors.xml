@@ -27,11 +27,12 @@
     <color name="hint_color">#808080</color>
     <color name="blue">#0000ff</color>
 
-    <color name="light_blue">#A5CFFF</color>
-    <color name="light_pink">#FFA5A5</color>
-    <color name="pale_yellow">#FFE8A5</color>
-    <color name="light_green">#A5FFC5</color>
-    <color name="light_magenta">#FFA5E3</color>
+
+    <color name="light_pink">#FDD6D6</color>
+    <color name="light_green">#D4FBE2</color>
+    <color name="pale_yellow">#FFF5D8</color>
+    <color name="light_magenta">#FBD4F0</color>
+    <color name="light_blue">#D2E5FB</color>
 
     <color name="teal">#23A615</color>
     <color name="red_bg">#FF0000</color>

@@ -49,7 +49,7 @@ public class DetailsPage extends AppCompatActivity {
         binding.DetailsSysPressure.setText(data.getFormattedSysPressure());
         binding.DetailsDysPressure.setText(data.getFormattedDysPressure());
         binding.DetailsHeartRate.setText(data.getFormattedHeartRate());
-        binding.DetailsComment.setText(data.getComment());
+        binding.DetailsComment.setText(data.getSafeComment());
 
         binding.tvIndicator1.setText(data.getSysStatus());
         binding.tvIndicator2.setText(data.getDysStatus());

@@ -42,4 +42,5 @@
     <string name="heart_rate">Heart Rate</string>
     <string name="clock_logo">clock logo</string>
     <string name="date_logo">date logo</string>
+    <string name="clear_filter">Clear filter</string>
 </resources>

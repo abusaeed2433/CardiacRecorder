@@ -110,6 +110,16 @@ public class HomePage extends AppCompatActivity {
             filterViewModel.setShowOrHide(false);
         });
 
+        binding.viewBottomSheet.buttonClearFilter.setOnClickListener(view ->{
+            if(binding == null) return;
+            binding.viewBottomSheet.tvFromDate.setText(getString(R.string.dashed_date));
+            binding.viewBottomSheet.tvToDate.setText(getString(R.string.dashed_date));
+            sortByAdapter.resetFilter();
+            sysAdapter.resetFilter();
+            dysAdapter.resetFilter();
+            hrAdapter.resetFilter();
+        });
+
     }
 
     private void startFilterModel(){

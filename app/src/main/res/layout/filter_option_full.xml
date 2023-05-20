@@ -243,21 +243,36 @@
     </LinearLayout>
 
     <android.widget.Button
+        android:id="@+id/buttonClearFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/button_ripple_back"
+        android:backgroundTint="@color/red_bg"
+        android:minHeight="40dp"
+        android:padding="8dp"
+        android:text="@string/clear_filter"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".65" />
+
+    <android.widget.Button
         android:id="@+id/buttonSaveFilter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
         android:layout_marginEnd="4dp"
         android:padding="8dp"
         android:background="@drawable/button_ripple_back"
         android:backgroundTint="@color/purple_500"
-        android:minHeight="32dp"
+        android:minHeight="40dp"
         android:text="@string/apply_filter"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintWidth_percent=".75" />
+        app:layout_constraintWidth_percent=".65" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -387,6 +387,10 @@ public class EachData implements Serializable {
         return comment;
     }
 
+    public String getSafeComment() {
+        return comment==null || comment.trim().isEmpty() ? "No comment" : comment;
+    }
+
     public static String getElapsedTime(long startTime, long endTime) {
         long duration = endTime - startTime;
         long days = TimeUnit.MILLISECONDS.toDays(duration);
@@ -406,7 +410,7 @@ public class EachData implements Serializable {
             sb.append("h");
             sb.append(" ");
         }
-        if (minutes >= 0) {
+        if (minutes >= 0 && days <= 0) {
             sb.append(minutes);
             sb.append("m");
             sb.append(" ");

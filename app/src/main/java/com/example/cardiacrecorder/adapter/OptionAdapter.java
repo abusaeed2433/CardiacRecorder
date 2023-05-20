@@ -72,6 +72,15 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
         return options.size();
     }
 
+
+    public void resetFilter(){
+        if(selectedPosition != -1){
+            int pos = selectedPosition;
+            selectedPosition = -1;
+            notifyItemChanged(pos);
+        }
+    }
+
     public int getSelectedPosition(){
         return selectedPosition;
     }

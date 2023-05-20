@@ -33,9 +33,9 @@
     <color name="light_green">#A5FFC5</color>
     <color name="light_magenta">#FFA5E3</color>
 
-    <color name="teal">#9bd770</color>
-    <color name="red_bg">#f32d17</color>
-    <color name="blue_bg">#3484f0</color>
+    <color name="teal">#23A615</color>
+    <color name="red_bg">#FF0000</color>
+    <color name="blue_bg">#0374FF</color>
 
     <color name="powder_blue">#c5e4ff</color>
     <color name="sky_blue">#aec8ff</color>

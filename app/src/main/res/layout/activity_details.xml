@@ -53,13 +53,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="date logo"
-                            android:src="@drawable/date" />
+                            android:src="@drawable/date2" />
 
                         <TextView
                             android:id="@+id/DetailsDate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
                             android:text="date"
                             android:textAlignment="center"
                             android:textSize="24sp"
@@ -92,7 +93,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="clock logo"
-                            android:src="@drawable/clock" />
+                            android:src="@drawable/clock2" />
 
                         <TextView
                             android:id="@+id/DetailsTime"
@@ -101,6 +102,7 @@
                             android:layout_marginBottom="12dp"
                             android:text="time"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -132,13 +134,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="sys logo"
-                            android:src="@drawable/sys_pressure" />
+                            android:src="@drawable/sys_pressure2" />
 
                         <TextView
                             android:id="@+id/DetailsSysPressure"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
                             android:text="sys"
                             android:textAlignment="center"
                             android:textSize="24sp"
@@ -172,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="dys logo"
-                            android:src="@drawable/dys_pressure" />
+                            android:src="@drawable/dys_pressure2" />
 
                         <TextView
                             android:id="@+id/DetailsDysPressure"
@@ -181,6 +184,7 @@
                             android:layout_marginBottom="12dp"
                             android:text="dys"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -212,13 +216,14 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="heart rate logo"
-                            android:src="@drawable/heart_beat" />
+                            android:src="@drawable/heart_beat2" />
 
                         <TextView
                             android:id="@+id/DetailsHeartRate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
                             android:text="beat"
                             android:textAlignment="center"
                             android:textSize="24sp"
@@ -251,10 +256,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:contentDescription="comment logo"
-                            android:src="@drawable/comment" />
+                            android:src="@drawable/comment2" />
 
                         <TextView
                             android:id="@+id/DetailsComment"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
@@ -296,6 +302,7 @@
 
                         <TextView
                             android:visibility="gone"
+                            android:textColor="@color/white"
                             android:id="@+id/tvIndicator1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -327,6 +334,7 @@
 
                         <TextView
                             android:visibility="gone"
+                            android:textColor="@color/white"
                             android:id="@+id/tvIndicator2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -359,6 +367,7 @@
                         <TextView
                             android:visibility="gone"
                             android:id="@+id/tvIndicator3"
+                            android:textColor="@color/white"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"

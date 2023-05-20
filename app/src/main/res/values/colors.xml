@@ -37,4 +37,7 @@
     <color name="red_bg">#f32d17</color>
     <color name="blue_bg">#3484f0</color>
 
+    <color name="powder_blue">#c5e4ff</color>
+    <color name="sky_blue">#aec8ff</color>
+
 </resources>

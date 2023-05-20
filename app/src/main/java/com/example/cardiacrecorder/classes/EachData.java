@@ -22,6 +22,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -121,6 +123,7 @@ public class EachData implements Serializable {
         }
     }
 
+
     public void setId(int id) {
         this.id = id;
     }
@@ -163,6 +166,21 @@ public class EachData implements Serializable {
         return "ok";
     }
 
+    public void setSpanSys(SpannableString spanSys) {
+        this.spanSys = spanSys;
+    }
+
+    public void setSpanDys(SpannableString spanDys) {
+        this.spanDys = spanDys;
+    }
+
+    public void setSpanHeart(SpannableString spanHeart) {
+        this.spanHeart = spanHeart;
+    }
+
+    public void setSpanDateTime(SpannableString spanDateTime) {
+        this.spanDateTime = spanDateTime;
+    }
     /**
      * checks if Dys Pressure is usual or not
      * @return true if Dys pressure < 60 or > 90
@@ -182,27 +200,6 @@ public class EachData implements Serializable {
         if(dysPressure < 60) return "low";
         if(dysPressure > 90) return "high";
         return "ok";
-    }
-
-    /**
-     * picks color based on unusual Sys Pressure
-     *
-     * @return BLUE if "Sys Pressure < 90" && RED if "Sys Pressure > 140"
-     */
-    public int getSysColor(){
-        if(sysPressure < 90) return Color.BLUE;
-        if(sysPressure > 140) return Color.RED;
-        return Color.BLACK;
-    }
-
-    /**
-     * picks color based on unusual Dys Pressure
-     * @return BLUE if "Dys Pressure < 60" && RED if "Dys Pressure > 90"
-     */
-    public int getDysColor(){
-        if(dysPressure < 60) return Color.BLUE;
-        if(dysPressure > 90) return Color.RED;
-        return Color.BLACK;
     }
 
     /**

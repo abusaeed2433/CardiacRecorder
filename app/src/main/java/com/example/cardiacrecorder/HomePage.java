@@ -21,7 +21,7 @@ import com.example.cardiacrecorder.adapter.RvAdapter;
 import com.example.cardiacrecorder.classes.EachData;
 import com.example.cardiacrecorder.classes.MyDatePicker;
 import com.example.cardiacrecorder.databinding.ActivityHomepageBinding;
-import com.example.cardiacrecorder.others.PopUpListener;
+import com.example.cardiacrecorder.others.AdapterListener;
 import com.example.cardiacrecorder.roomDb.BoardViewModel;
 import com.example.cardiacrecorder.viewmodel.FilterViewModel;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -226,7 +226,7 @@ public class HomePage extends AppCompatActivity {
 
         });
 
-        adapter.setPopUpListener(new PopUpListener() {
+        adapter.setAdapterListener(new AdapterListener() {
             @Override
             public void onDeleteRequest(EachData data) {
                 if(viewModel != null){
@@ -237,6 +237,14 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onEditRequest(EachData data) {
                 Intent intent = new Intent(HomePage.this,AdderActivity.class);
+                intent.putExtra("data",data);
+                startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+
+            @Override
+            public void onShowRequest(EachData data) {
+                Intent intent = new Intent(HomePage.this,DetailsPage.class);
                 intent.putExtra("data",data);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

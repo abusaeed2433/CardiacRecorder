@@ -19,17 +19,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cardiacrecorder.DetailsPage;
 import com.example.cardiacrecorder.R;
 import com.example.cardiacrecorder.classes.EachData;
-import com.example.cardiacrecorder.others.PopUpListener;
+import com.example.cardiacrecorder.others.AdapterListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
     private final Context mContext;
     private EachData curItem;
-    private PopUpListener popUpListener = null;
+    private AdapterListener adapterListener = null;
     int curColor = 0;
 
     public RvAdapter(Context mContext) {
@@ -73,9 +72,9 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         holder.tvHeartRate.setBackgroundResource(curItem.getHeartBackground());
 
         holder.itemView.setOnClickListener(view -> {
-            Intent intent = new Intent(mContext,DetailsPage.class);
-            intent.putExtra("data",getItem(holder.getAdapterPosition()));
-            mContext.startActivity(intent);
+            if(adapterListener != null){
+                adapterListener.onShowRequest(getItem(holder.getAdapterPosition()));
+            }
         });
 
         holder.ivMore.setOnClickListener(view -> {
@@ -83,14 +82,14 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
             popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(item -> {
                 if(item.getItemId() == R.id.popUpEdit){
-                    if(popUpListener!=null) {
-                        popUpListener.onEditRequest(getItem(holder.getAdapterPosition()));
+                    if(adapterListener !=null) {
+                        adapterListener.onEditRequest(getItem(holder.getAdapterPosition()));
                     }
                     return true;
                 }
                 else if(item.getItemId() == R.id.popUpDelete){
-                    if(popUpListener!=null) {
-                        popUpListener.onDeleteRequest(getItem(holder.getAdapterPosition()));
+                    if(adapterListener !=null) {
+                        adapterListener.onDeleteRequest(getItem(holder.getAdapterPosition()));
                     }
                     return true;
                 }
@@ -136,8 +135,8 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         }
     }
 
-    public void setPopUpListener(PopUpListener popUpListener) {
-        this.popUpListener = popUpListener;
+    public void setAdapterListener(AdapterListener adapterListener) {
+        this.adapterListener = adapterListener;
     }
 
 }

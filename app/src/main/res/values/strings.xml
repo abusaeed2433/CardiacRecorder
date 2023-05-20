@@ -40,4 +40,6 @@
     <string name="systolic_pressure">Systolic pressure</string>
     <string name="dashed_date">--/--/----</string>
     <string name="heart_rate">Heart Rate</string>
+    <string name="clock_logo">clock logo</string>
+    <string name="date_logo">date logo</string>
 </resources>

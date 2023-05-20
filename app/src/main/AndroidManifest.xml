@@ -16,7 +16,8 @@
             android:name=".AdderActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity" />
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeWithClose"/>
 
         <activity
             android:name=".FrontPage"
@@ -41,7 +42,8 @@
             android:name=".DetailsPage"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeWithClose"/>
 
     </application>
 

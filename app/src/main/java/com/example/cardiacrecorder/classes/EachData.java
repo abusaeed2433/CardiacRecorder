@@ -150,17 +150,17 @@ public class EachData implements Serializable {
      * @return return "Sys Pressure: LOW" if Sys Pressure is < 90 && "Sys Pressure: HIGH" if Sys Pressure is > 140
      */
     public String getSysStatus(){
-        if(!isSysUnusual()) return null;
-        if(sysPressure < 90) return "SYS PRESSURE: LOW";
-        if(sysPressure > 140) return "SYS PRESSURE: HIGH";
-        return null;
+        if(!isSysUnusual()) return "ok";
+        if(sysPressure < 90) return "low";
+        if(sysPressure > 140) return "high";
+        return "ok";
     }
 
     public String getHeartRateStatus(){
-        if(!isHeartRateUnusual()) return null;
-        if(heartRate < 60) return "HEART RATE: LOW";
-        if(heartRate > 100) return "HEART RATE: HIGH";
-        return null;
+        if(!isHeartRateUnusual()) return "ok";
+        if(heartRate < 60) return "low";
+        if(heartRate > 100) return "high";
+        return "ok";
     }
 
     /**
@@ -178,10 +178,10 @@ public class EachData implements Serializable {
      * @return return "Dys Pressure: LOW" if Dys Pressure is < 60 && "Dys Pressure: HIGH" if Dys Pressure is > 90
      */
     public String getDysStatus(){
-        if(!isDysUnusual()) return null;
-        if(dysPressure < 60) return "DYS PRESSURE: LOW";
-        if(dysPressure > 90) return "DYS PRESSURE: HIGH";
-        return null;
+        if(!isDysUnusual()) return "ok";
+        if(dysPressure < 60) return "low";
+        if(dysPressure > 90) return "high";
+        return "ok";
     }
 
     /**

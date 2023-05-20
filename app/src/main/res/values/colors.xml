@@ -40,4 +40,7 @@
     <color name="powder_blue">#c5e4ff</color>
     <color name="sky_blue">#aec8ff</color>
 
+    <color name="action1">#E70411</color>
+    <color name="action2">#9a0312</color>
+
 </resources>

@@ -56,11 +56,17 @@ public class HomePage extends AppCompatActivity {
         startFilterModel();
     }
 
+    /**
+     * initializes bottomSheet
+     */
     private void initialize(){
         bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.bottom_sheet));
     }
 
 
+    /**
+     * sets filter
+     */
     private void setUpFilter(){
         if(binding == null) return;
 
@@ -122,6 +128,9 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    /**
+     * starts filter model
+     */
     private void startFilterModel(){
         filterViewModel = new ViewModelProvider(this).get(FilterViewModel.class);
         filterViewModel.getShowOrHide().observe(this, aBoolean -> {
@@ -136,6 +145,9 @@ public class HomePage extends AppCompatActivity {
         filterViewModel.getTrigger().observe(this, ignore -> submitList());
     }
 
+    /**
+     * creates the list
+     */
     private void submitList(){
         if(filterViewModel == null) {
             adapter.submitList(allData);
@@ -185,6 +197,10 @@ public class HomePage extends AppCompatActivity {
     }
 
 
+    /**
+     * toast shower
+     * @param message
+     */
     private void showSafeToast(String message){
         try {
             mToast.cancel();
@@ -236,6 +252,9 @@ public class HomePage extends AppCompatActivity {
 
         });
 
+        /**
+         * adapter listener
+         */
         adapter.setAdapterListener(new AdapterListener() {
             @Override
             public void onDeleteRequest(EachData data) {

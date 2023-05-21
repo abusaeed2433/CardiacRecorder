@@ -37,6 +37,9 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         this.mContext = mContext;
     }
 
+    /**
+     * checks if contents are the same
+     */
     private final static DiffUtil.ItemCallback<EachData> diffCallback = new DiffUtil.ItemCallback<EachData>() {
         @Override
         public boolean areItemsTheSame(@NonNull EachData oldItem, @NonNull EachData newItem) {
@@ -49,6 +52,14 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         }
     };
 
+    /**
+     * Creates ViewHolder
+     * @param parent The ViewGroup into which the new View will be added after it is bound to
+     *               an adapter position.
+     * @param viewType The view type of the new View.
+     *
+     * @return ViewHolder
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -57,6 +68,12 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    /**
+     * Creates Layout
+     * @param holder The ViewHolder which should be updated to represent the contents of the
+     *        item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
     @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -103,16 +120,18 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
 
     }
 
+    /**
+     * adds background color
+     * @return color
+     */
     private int getBackgroundColor() {
         List<Integer> colorCode = new ArrayList<>();
 
-        colorCode.add(R.color.light_pink);
         colorCode.add(R.color.light_green);
         colorCode.add(R.color.pale_yellow);
         colorCode.add(R.color.light_magenta);
         colorCode.add(R.color.light_blue);
 
-        //123
         //Random random = new Random();
         //int number = random.nextInt(colorCode.size());
         //return colorCode.get(number);
@@ -120,6 +139,9 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         return colorCode.get(curColor);
     }
 
+    /**
+     * ViewHolder Class
+     */
     static class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView tvDateTime, tvSysPressure, tvDysPressure, tvHeartRate;
         private final ImageView ivMore;
@@ -136,6 +158,10 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         }
     }
 
+    /**
+     * AdapterListener Setter
+     * @param adapterListener
+     */
     public void setAdapterListener(AdapterListener adapterListener) {
         this.adapterListener = adapterListener;
     }

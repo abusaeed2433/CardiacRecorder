@@ -1,5 +1,10 @@
 package com.example.cardiacrecorder;
 
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.HIGH;
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.LOW;
+import static com.example.cardiacrecorder.viewmodel.FilterViewModel.NORMAL;
+import static org.junit.Assert.assertTrue;
+
 import android.text.SpannableString;
 import android.text.style.AbsoluteSizeSpan;
 
@@ -405,11 +410,10 @@ public class EachDataTest {
 
     @Test
     public void testGetSafeComment() {
-        String comment = "This is a comment";
+        String expectedText = "This is a comment";
 
-        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 80, 70, comment);
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 80, 70, expectedText);
 
-        String expectedText = comment;
         String safeComment = eachData.getSafeComment();
 
         Assert.assertEquals(expectedText, safeComment);
@@ -425,4 +429,12 @@ public class EachDataTest {
 
         Assert.assertEquals(expectedText, elapsedTime);
     }
+
+    @Test
+    public void testIsThisOK(){
+        EachData eachData = new EachData(System.currentTimeMillis(),"10/10/2023","10:10PM",60,95,75,"nothing");
+
+        assertTrue(eachData.isThisOK(LOW,HIGH,NORMAL));
+    }
+
 }

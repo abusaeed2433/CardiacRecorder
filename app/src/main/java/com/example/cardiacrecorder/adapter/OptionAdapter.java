@@ -27,12 +27,26 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
         this.options.addAll(Arrays.asList(args));
     }
 
+    /**
+     * creates ViewHolder
+     * @param parent The ViewGroup into which the new View will be added after it is bound to
+     *               an adapter position.
+     * @param viewType The view type of the new View.
+     *
+     * @return ViewHolder
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.single_option,parent,false));
     }
 
+    /**
+     * sets data in layout
+     * @param holder The ViewHolder which should be updated to represent the contents of the
+     *        item at the given position in the data set.
+     * @param position The position of the item within the adapter's data set.
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.tvOptionText.setText(options.get(position));
@@ -67,12 +81,19 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
 
     }
 
+    /**
+     * Item counter
+     * @return number of items
+     */
     @Override
     public int getItemCount() {
         return options.size();
     }
 
 
+    /**
+     * Resets position
+     */
     public void resetFilter(){
         if(selectedPosition != -1){
             int pos = selectedPosition;
@@ -81,10 +102,17 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
         }
     }
 
+    /**
+     * getter for position
+     * @return position
+     */
     public int getSelectedPosition(){
         return selectedPosition;
     }
 
+    /**
+     * ViewHolder class
+     */
     static class ViewHolder extends RecyclerView.ViewHolder{
         final TextView tvOptionText;
         public ViewHolder(@NonNull View itemView) {

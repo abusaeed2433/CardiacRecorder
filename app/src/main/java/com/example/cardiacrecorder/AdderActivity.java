@@ -31,6 +31,13 @@ public class AdderActivity extends AppCompatActivity {
     private MyTimePicker timePicker;
     private EachData passedData = null;
 
+    /**
+     * The OnCreate Method for the activity
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -226,6 +233,12 @@ public class AdderActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Item Selector
+     * @param item The menu item that was selected.
+     *
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -236,6 +249,9 @@ public class AdderActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * back method
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -243,6 +259,9 @@ public class AdderActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * destroy method
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

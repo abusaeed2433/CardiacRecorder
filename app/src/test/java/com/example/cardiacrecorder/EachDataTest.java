@@ -189,8 +189,8 @@ public class EachDataTest {
         int id1 = 1;
         int id2 = 2;
 
-        EachData item1 = new EachData(id1, 123456789, "dd-mm-yyyy", "hh:mma", 90, 80, 70, "Comment 1");
-        EachData item2 = new EachData(id2, 987654321, "dd-mm-yyyy", "hh:mma", 120, 80, 70, "Comment 2");
+        EachData item1 = new EachData(id1, 123456789, "01-01-2023", "12:00AM", 90, 80, 70, "Comment 1");
+        EachData item2 = new EachData(id2, 987654321, "01-01-2022", "12:00AM", 120, 80, 70, "Comment 2");
 
         boolean isSame1 = item1.isIdSame(item1);
         boolean isSame2 = item1.isIdSame(item2);
@@ -201,9 +201,9 @@ public class EachDataTest {
 
     @Test
     public void testIsFullySame() {
-        EachData originalData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 80, 70, "Comment");
-        EachData sameData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 80, 70, "Comment");
-        EachData differentData = new EachData(2, 987654321, "dd-mm-yyyy", "hh:mma", 130, 90, 75, "Different Comment");
+        EachData originalData = new EachData(1, 123456789, "01-01-2023", "12:00AM", 120, 80, 70, "Comment");
+        EachData sameData = new EachData(1, 123456789, "01-01-2023", "12:00AM", 120, 80, 70, "Comment");
+        EachData differentData = new EachData(2, 987654321, "01-01-2022", "12:00AM", 130, 90, 75, "Different Comment");
 
         boolean isSame1 = originalData.isFullySame(sameData);
         boolean isSame2 = originalData.isFullySame(differentData);
@@ -232,7 +232,7 @@ public class EachDataTest {
     public void testGetSpannableSys() {
         int sysPressure = 120;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", sysPressure, 80, 70, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", sysPressure, 80, 70, "Comment");
 
         // Mock the SpannableString
         SpannableString spannableStringMock = Mockito.mock(SpannableString.class);
@@ -260,7 +260,7 @@ public class EachDataTest {
     public void testGetSysBackground() {
         int sysPressure = 120;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", sysPressure, 80, 70, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", sysPressure, 80, 70, "Comment");
 
         int expectedBackground = R.drawable.round_back_normal;
         int actualBackground = eachData.getSysBackground();
@@ -272,7 +272,7 @@ public class EachDataTest {
     public void testGetDysBackground() {
         int dysPressure = 80;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, dysPressure, 70, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, dysPressure, 70, "Comment");
 
         int expectedBackground = R.drawable.round_back_normal;
         int actualBackground = eachData.getDysBackground();
@@ -284,7 +284,7 @@ public class EachDataTest {
     public void testGetHeartBackground() {
         int heartRate = 80;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 80, heartRate, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 80, heartRate, "Comment");
 
         int expectedBackground = R.drawable.round_back_normal;
         int actualBackground = eachData.getHeartBackground();
@@ -296,7 +296,7 @@ public class EachDataTest {
     public void testGetSpannableDys() {
         int dysPressure = 80;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, dysPressure, 70, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, dysPressure, 70, "Comment");
 
         // Mock the SpannableString
         SpannableString spannableStringMock = Mockito.mock(SpannableString.class);
@@ -326,7 +326,7 @@ public class EachDataTest {
     public void testGetSpannableHeart() {
         int heartRate = 70;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 80, heartRate, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 80, heartRate, "Comment");
 
         // Mock the SpannableString
         SpannableString spannableStringMock = Mockito.mock(SpannableString.class);
@@ -353,7 +353,7 @@ public class EachDataTest {
     public void testGetFormattedDysPressure() {
         int dysPressure = 80;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, dysPressure, 70, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, dysPressure, 70, "Comment");
 
         String expectedFormattedDysPressure = dysPressure + "mm Hg";
         String formattedDysPressure = eachData.getFormattedDysPressure();
@@ -364,10 +364,10 @@ public class EachDataTest {
     @Test
     public void testGetSpannableDateTime() {
         long timestamp = 123456789;
-        String date = "dd-mm-yyyy";
+        String date = "01-01-2022";
         String tAgo = "2 hours ago";
 
-        EachData eachData = new EachData(1, timestamp, date, "hh:mma", 120, 80, 70, "Comment");
+        EachData eachData = new EachData(1, timestamp, date, "12:00AM", 120, 80, 70, "Comment");
 
         // Mock the SpannableString
         SpannableString spannableStringMock = Mockito.mock(SpannableString.class);
@@ -395,7 +395,7 @@ public class EachDataTest {
     public void testGetFormattedHeartRate() {
         int heartRate = 80;
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 70, heartRate, "Comment");
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 70, heartRate, "Comment");
 
         String expectedText = heartRate + "BPM";
         String formattedHeartRate = eachData.getFormattedHeartRate();
@@ -407,7 +407,7 @@ public class EachDataTest {
     public void testGetSafeComment() {
         String comment = "This is a comment";
 
-        EachData eachData = new EachData(1, 123456789, "dd-mm-yyyy", "hh:mma", 120, 80, 70, comment);
+        EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, 80, 70, comment);
 
         String expectedText = comment;
         String safeComment = eachData.getSafeComment();

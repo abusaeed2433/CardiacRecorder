@@ -15,6 +15,7 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.example.cardiacrecorder.R;
+import com.google.firebase.database.Exclude;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -23,14 +24,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 @Entity(tableName = "data_table")
 public class EachData implements Serializable {
 //  date measured (presented in  format)
-//• time measured (presented in hh:mm format)
+//• time measured (presented in hh:mm:a format)
 //• systolic pressure in mm Hg (non-negative integer)
 //• diastolic pressure in mm Hg (non-negative integer)
 //• heart rate in beats per minute (non-negative integer)
@@ -56,6 +59,7 @@ public class EachData implements Serializable {
     private final String comment;
 
     @Ignore
+    @Exclude
     private transient SpannableString spanSys = null, spanDys = null, spanHeart = null, spanDateTime = null;
 
     public EachData(long timestamp, @NonNull String date, @NonNull String time, int sysPressure,
@@ -82,6 +86,18 @@ public class EachData implements Serializable {
         this.heartRate = heartRate;
         this.comment = comment;
         this.epochDate = getEpochDate(date);
+    }
+
+    public EachData(DataModel model) {
+        id = model.id;
+        timestamp = model.timestamp;
+        time = model.time;
+        date = model.date;
+        epochDate = model.epochDate;
+        sysPressure = model.sysPressure;
+        dysPressure = model.dysPressure;
+        heartRate = model.heartRate;
+        comment = model.comment;
     }
 
     public boolean isThisOK(int sysBy, int dysBy, int heartBy){
@@ -274,7 +290,7 @@ public class EachData implements Serializable {
      */
     public int getSysBackground(){
         if(sysPressure < 90) return R.drawable.round_back_down;
-        if(sysPressure < 140) return R.drawable.round_back_normal;
+        if(sysPressure <= 140) return R.drawable.round_back_normal;
         return R.drawable.round_back_up;
     }
 
@@ -284,7 +300,7 @@ public class EachData implements Serializable {
      */
     public int getDysBackground(){
         if(dysPressure < 60) return R.drawable.round_back_down;
-        if(dysPressure < 90) return R.drawable.round_back_normal;
+        if(dysPressure <= 90) return R.drawable.round_back_normal;
         return R.drawable.round_back_up;
     }
 
@@ -294,7 +310,7 @@ public class EachData implements Serializable {
      */
     public int getHeartBackground(){
         if(heartRate < 60) return R.drawable.round_back_down;
-        if(heartRate < 100) return R.drawable.round_back_normal;
+        if(heartRate <= 100) return R.drawable.round_back_normal;
         return R.drawable.round_back_up;
     }
 
@@ -414,6 +430,10 @@ public class EachData implements Serializable {
         }
 
         return sb.append("ago").toString();
+    }
+
+    public DataModel getModel(){
+        return new DataModel(id,timestamp,date,time,epochDate,sysPressure,dysPressure,heartRate,comment);
     }
 
 }

@@ -57,6 +57,9 @@ public class BoardRepository {//Repository Link Notice
         executor.execute(() -> boardDao.delete(data));
     }
 
-
+    public void deleteAll(){
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        executor.execute(boardDao::deleteAll);
+    }
 
 }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -28,7 +29,15 @@ public class FrontPage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            startActivity(new Intent(FrontPage.this, HomePage.class));
+            SharedPreferences sp = getSharedPreferences("sp",MODE_PRIVATE);
+            Intent intent;
+            if(sp.getBoolean("amILoggedIn",false)){
+                intent = new Intent(this,HomePage.class);
+            }
+            else{
+                intent = new Intent(this, LoginActivity.class);
+            }
+            startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
         },1200);
 

@@ -45,6 +45,10 @@ public class BoardViewModel extends AndroidViewModel {
         repository.delete(data);
     }
 
+    public void deleteAll(){
+        repository.deleteAll();
+    }
+
     /**
      * Read all data form Room database
      * @return All data objects

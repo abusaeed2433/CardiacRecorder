@@ -5,28 +5,41 @@ import static com.example.cardiacrecorder.viewmodel.FilterViewModel.DYS;
 import static com.example.cardiacrecorder.viewmodel.FilterViewModel.HEART;
 import static com.example.cardiacrecorder.viewmodel.FilterViewModel.SYS;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.cardiacrecorder.adapter.OptionAdapter;
 import com.example.cardiacrecorder.adapter.RvAdapter;
+import com.example.cardiacrecorder.classes.DataModel;
 import com.example.cardiacrecorder.classes.EachData;
 import com.example.cardiacrecorder.classes.MyDatePicker;
 import com.example.cardiacrecorder.databinding.ActivityHomepageBinding;
 import com.example.cardiacrecorder.others.AdapterListener;
 import com.example.cardiacrecorder.roomDb.BoardViewModel;
 import com.example.cardiacrecorder.viewmodel.FilterViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class HomePage extends AppCompatActivity {
@@ -199,7 +212,7 @@ public class HomePage extends AppCompatActivity {
 
     /**
      * toast shower
-     * @param message
+     * @param message to be shown
      */
     private void showSafeToast(String message){
         try {
@@ -252,9 +265,6 @@ public class HomePage extends AppCompatActivity {
 
         });
 
-        /**
-         * adapter listener
-         */
         adapter.setAdapterListener(new AdapterListener() {
             @Override
             public void onDeleteRequest(EachData data) {
@@ -281,6 +291,87 @@ public class HomePage extends AppCompatActivity {
         });
     }
 
+    private void logOutUser(){
+        showSafeToast(getString(R.string.please_wait));
+        backupData(error -> {
+            if(error != null){
+                showSafeToast(error);
+                return;
+            }
+            viewModel.deleteAll();
+            FirebaseAuth.getInstance().signOut();
+            SharedPreferences sp = getSharedPreferences("sp",MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putBoolean("amILoggedIn",false);
+            editor.apply();
+            Intent intent = new Intent(HomePage.this, LoginActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private interface BackupListener{
+        void onBackupProcessed(String error);
+    }
+    private void backupData(BackupListener listener){
+        if( allData == null || allData.isEmpty()) {
+            listener.onBackupProcessed(null);
+            return;
+        }
+
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String userId = auth.getUid();
+        if(userId == null){
+            listener.onBackupProcessed(getString(R.string.failed_to_authenticate));
+            return;
+        }
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("data").child(userId);
+
+        HashMap<String, DataModel> map = new HashMap<>();
+
+        for(EachData data : allData){
+            map.put(data.getId()+"",data.getModel());
+        }
+
+        ref.setValue(map).addOnCompleteListener(task -> {
+            if(task.isComplete()){
+                listener.onBackupProcessed(null);
+            }
+            else{
+                listener.onBackupProcessed("Failed to backup data. Try again later.");
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.action_bar_menu, menu);
+        return true;
+    }
+    //for showing search and more icon in top above
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.barLogout){
+            new AlertDialog.Builder(this)
+                    .setTitle("LogOut?")
+                    .setMessage(R.string.are_you_sure_you_want_to_log_out)
+                    .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                        dialog.dismiss();
+                        logOutUser();
+                    })
+                    .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
+                    .setCancelable(true)
+                    .show();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onBackPressed() {
         if(isSheetShowing){
@@ -288,7 +379,7 @@ public class HomePage extends AppCompatActivity {
         }
         else{
             if(isDoubleClickDone) {
-                super.onBackPressed();
+                finish();
             }
             else {
                 isDoubleClickDone = true;

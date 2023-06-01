@@ -43,4 +43,35 @@
     <string name="clock_logo">clock logo</string>
     <string name="date_logo">date logo</string>
     <string name="clear_filter">Clear filter</string>
+    <string name="_88">+88</string>
+    <string name="can_t_be_empty">Can\'t be empty</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="phone_number">Phone number</string>
+    <string name="next">Next</string>
+    <string name="verify">Verify</string>
+    <string name="verification_message">Please type the verification code sent to\n
+        %1$s</string>
+    <string name="verification_message_dummy">Please type the verification code sent to\n
+        012345</string>
+    <string name="message_icon">Message icon</string>
+    <string name="otp">OTP</string>
+    <string name="enter_otp_first">Enter OTP first</string>
+    <string name="error_occurred">Error occurred</string>
+    <string name="about_invalid_phone_number">Invalid phone number</string>
+    <string name="invalid_otp_recheck_and_try_again">Invalid OTP</string>
+    <string name="session_expired_try_again">Session expired. Try again later</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="_00">00</string>
+    <string name="sending_otp">Sending OTP. Please wait …</string>
+    <string name="verifying_otp">Verifying OTP…</string>
+    <string name="phone_number_not_found">Phone number not found</string>
+    <string name="about_create_account_phone_not_found">You don\'t have any account with this phone number. Please create a account first, then login</string>
+    <string name="create_account">Create account</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout">LogOut</string>
+    <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out?</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="login">Login</string>
+    <string name="failed_to_authenticate">Failed to authenticate</string>
 </resources>

@@ -30,7 +30,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <TextView
@@ -51,7 +51,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/_10_11_2023"
                         android:importantForAutofill="no"
                         android:inputType="none"
@@ -73,7 +75,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     android:orientation="vertical">
 
                     <TextView
@@ -94,7 +96,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/_10_25"
                         android:importantForAutofill="no"
                         android:inputType="none"
@@ -117,7 +121,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     
                     android:orientation="vertical">
 
@@ -140,7 +144,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/_60"
                         android:importantForAutofill="no"
                         android:inputType="number"
@@ -161,7 +167,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     
                     android:orientation="vertical">
 
@@ -184,7 +190,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/_60"
                         android:importantForAutofill="no"
                         android:inputType="number"
@@ -205,7 +213,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     
                     android:orientation="vertical">
 
@@ -228,7 +236,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/_70"
                         android:importantForAutofill="no"
                         android:inputType="number"
@@ -249,7 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     
-                    android:background="@color/sky_blue"
+                    android:background="@color/white"
                     
                     android:orientation="vertical">
 
@@ -272,7 +282,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
-                        android:background="@color/powder_blue"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/very_light_green"
                         android:hint="@string/enter_any_message"
                         android:importantForAutofill="no"
                         android:inputType="text"
@@ -288,11 +300,12 @@
                 android:id="@+id/buttonSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/button_ripple_back"
                 android:backgroundTint="@color/sky_blue"
                 android:layout_gravity="end"
                 android:text="@string/save"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:fontFamily="serif"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

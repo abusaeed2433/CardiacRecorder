@@ -1,70 +1,76 @@
 package com.example.cardiacrecorder;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-import com.unknownn.rentroom.others.CallBackUserChecker;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.example.cardiacrecorder.classes.DataModel;
+import com.example.cardiacrecorder.classes.EachData;
+import com.example.cardiacrecorder.others.CallBackUserChecker;
+import com.example.cardiacrecorder.roomDb.BoardViewModel;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class OTPActivity extends AppCompatActivity implements CallBackUserChecker {
-
-	private ConstraintLayout constraintLayoutLogin;
-	private TextView textViewAboutOTP;
-	private TextInputLayout tilOTP;
-	private TextInputEditText editTextOTP;
-	private Button buttonVerify;
-	private String phone;
 	private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-	private PhoneAuthProvider.ForceResendingToken mResendToken;
+	//private PhoneAuthProvider.ForceResendingToken mResendToken;
 	private Dialog mainDialog;
 	private String codeByGoogle;
-	private DataSaver dataSaver = null;
-	private boolean isFromLogin = true;
-	private String category;
+
+	private com.example.cardiacrecorder.databinding.ActivityOtpBinding binding = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_otp);
+		binding = com.example.cardiacrecorder.databinding.ActivityOtpBinding.inflate(getLayoutInflater());
+		setContentView(binding.getRoot());
 
-		constraintLayoutLogin = findViewById(R.id.constraintLayoutLogin);
-		textViewAboutOTP = findViewById(R.id.textViewAboutOTP);
-		tilOTP = findViewById(R.id.tilOTP);
-		editTextOTP = findViewById(R.id.editTextOTP);
-		buttonVerify = findViewById(R.id.buttonVerify);
+		ActionBar actionBar = getSupportActionBar();
+
+		if(actionBar != null){
+			actionBar.setDisplayHomeAsUpEnabled(true);
+		}
 
 		initializeCallBack();
 
-		phone = getIntent().getStringExtra("phone");
-		isFromLogin = getIntent().getBooleanExtra("is_from_login",true);
-		category = getIntent().getStringExtra("category");
-		textViewAboutOTP.setText(getString(R.string.verification_message,phone));
+		String phone = getIntent().getStringExtra("phone");
+		binding.textViewAboutOTP.setText(getString(R.string.verification_message,phone));
 
 		showProgress(false);
 		sendVerificationCode(phone);
 
-		buttonVerify.setOnClickListener(view -> {
-			String enteredCode = String.valueOf(editTextOTP.getText());
+		binding.buttonVerify.setOnClickListener(view -> {
+			String enteredCode = String.valueOf(binding.editTextOTP.getText());
 			if(!enteredCode.isEmpty() && !enteredCode.equalsIgnoreCase("null")){
-				buttonVerify.setEnabled(false);
+				binding.buttonVerify.setEnabled(false);
 				showProgress(true);
-				buttonVerify.setEnabled(true);
+				binding.buttonVerify.setEnabled(true);
 				verifyCode(enteredCode);
 			}
 			else{
@@ -85,32 +91,20 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 
 	private void showSnackBar(String message){
 		Snackbar snackbar = Snackbar.make(findViewById(R.id.constraintLayoutLogin),message,Snackbar.LENGTH_SHORT);
-		snackbar.setAction(R.string.ok, view -> snackbar.dismiss());
+		snackbar.setAction(android.R.string.ok, view -> snackbar.dismiss());
 		snackbar.show();
 	}
 
 	private void checkUserExistence(String userId){
-		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
+		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("data").child(userId);
 		ref.addListenerForSingleValueEvent(new ValueEventListener() {
 			@Override
 			public void onDataChange(@NonNull DataSnapshot snapshot) {
-				if(snapshot.exists()){
-					if(snapshot.child("category").exists()){
-						String val = String.valueOf(snapshot.child("category").getValue());
-						isUserAvailable(val);
-					}
-					else{
-						if(snapshot.child("phone").exists())
-							isUserAvailable("4");//user available
-						else
-							isUserAvailable("0");
-					}
-				}
-				else isUserAvailable("0");//user not available
+				isUserAvailable(snapshot.exists());
 			}
 			@Override
 			public void onCancelled(@NonNull DatabaseError error) {
-				isUserAvailable("-1");//error occurred
+				isUserAvailable(null);
 			}
 		});
 	}
@@ -130,17 +124,17 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 					switch (errorCode) {
 						case "ERROR_INVALID_PHONE_NUMBER":
 							showAlertDialog( getString(R.string.error_occurred),
-									getString(R.string.about_invalid_phone_number));
+									getString(R.string.about_invalid_phone_number),false);
 							break;
 						case "ERROR_INVALID_VERIFICATION_CODE":
 							showAlertDialog(getString(R.string.error_occurred)
-									,getString(R.string.invalid_otp_recheck_and_try_again));
+									,getString(R.string.invalid_otp_recheck_and_try_again),false);
 							break;
 						case "ERROR_SESSION_EXPIRED":
-							showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again));
+							showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again),false);
 							break;
 						default:
-							showAlertDialog(getString(R.string.error_occurred),e.getMessage());
+							showAlertDialog(getString(R.string.error_occurred),e.getMessage(),true);
 			}
 		});
 	}
@@ -152,7 +146,7 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		}
 		catch (Exception e){
 			dismissMainDialog();
-			showAlertDialog(getString(R.string.error_occurred),getString(R.string.something_went_wrong));
+			showAlertDialog(getString(R.string.error_occurred),getString(R.string.something_went_wrong),true);
 		}
 	}
 
@@ -161,8 +155,8 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				PhoneAuthOptions.newBuilder(FirebaseAuth.getInstance())
 						.setPhoneNumber(phone)// Phone number to verify
 						.setTimeout(30L, TimeUnit.SECONDS)// Timeout and unit
-						.setActivity(com.unknownn.rentroom.OTPActivity.this)// Activity (for callback binding)
-						.setCallbacks(mCallbacks)      // OnVerificationStateChangedCallbacks
+						.setActivity(this)// Activity (for callback binding)
+						.setCallbacks(mCallbacks) // OnVerificationStateChangedCallbacks
 						.build();
 		PhoneAuthProvider.verifyPhoneNumber(options);
 	}
@@ -172,10 +166,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 			@Override
 			public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
 				String code = credential.getSmsCode(); // code from sms, automatically retrieved by google,
-				editTextOTP.setText(code);
-				buttonVerify.setEnabled(false);//disabling button, so that user can't click
+				binding.editTextOTP.setText(code);
+				binding.buttonVerify.setEnabled(false);//disabling button, so that user can't click
 				showProgress(true);
-				buttonVerify.setEnabled(true);
+				binding.buttonVerify.setEnabled(true);
 				verifyCode(code);
 			}
 
@@ -190,17 +184,17 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				switch (errorCode) {
 					case "ERROR_INVALID_PHONE_NUMBER":
 						showAlertDialog(getString(R.string.error_occurred),
-								getString(R.string.about_invalid_phone_number));
+								getString(R.string.about_invalid_phone_number),false);
 						break;
 					case "ERROR_INVALID_VERIFICATION_CODE":
 						showAlertDialog(getString(R.string.invalid_otp),
-								getString(R.string.invalid_otp_recheck_and_try_again));
+								getString(R.string.invalid_otp_recheck_and_try_again),false);
 						break;
 					case "ERROR_SESSION_EXPIRED":
-						showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again));
+						showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again),false);
 						break;
 					default:
-						showAlertDialog(getString(R.string.error_occurred),e.getMessage());
+						showAlertDialog(getString(R.string.error_occurred),e.getMessage(),true);
 						break;
 				}
 			}
@@ -209,17 +203,20 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 			public void onCodeSent(@NonNull String verificationId,
 			                       @NonNull PhoneAuthProvider.ForceResendingToken token) {
 				codeByGoogle = verificationId; //sent by google not from sms
-				mResendToken = token;
+				//mResendToken = token;
 				dismissMainDialog();
 			}
 		};
 	}
 
-	private void showAlertDialog(String title,String message){
-		new AlertDialog.Builder(com.unknownn.rentroom.OTPActivity.this)
+	private void showAlertDialog(String title,String message, boolean shouldExit){
+		new AlertDialog.Builder(this)
 				.setTitle(title)
 				.setMessage(message)
-				.setPositiveButton(R.string.ok, (dialogInterface, i) -> dialogInterface.dismiss())
+				.setPositiveButton(android.R.string.ok, (dialogInterface, i) -> {
+					dialogInterface.dismiss();
+					if(shouldExit) finish();
+				})
 				.setCancelable(false)
 				.show();
 	}
@@ -231,7 +228,7 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 	}
 
 	private void showProgress(boolean isFromVerify) {
-		mainDialog = new Dialog(com.unknownn.rentroom.OTPActivity.this);
+		mainDialog = new Dialog(this);
 		mainDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		mainDialog.setContentView(R.layout.custom_progress_bar);
 
@@ -252,80 +249,76 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 	}
 
 	@Override
-	public void isUserAvailable(String type) {
-		dismissMainDialog();
-		if(type.equals("-1")) {
-			showAlertDialog(getString(R.string.error_occurred), getString(R.string.something_went_wrong));
-		}
-		else if(type.equals("0")){// user not available
-
-			if(isFromLogin){ // will show alert
-				new AlertDialog.Builder(com.unknownn.rentroom.OTPActivity.this)
-						.setTitle(getString(R.string.phone_number_not_found))
-						.setMessage(getString(R.string.about_create_account_phone_not_found))
-						.setCancelable(false)
-						.setPositiveButton(R.string.create_account, (dialog, which) -> takeToProperActivity())
-						.setNegativeButton(R.string.cancel, (dialogInterface, i) -> {
-							dialogInterface.dismiss();
-							finish();//just closing the activity
-						})
-						.show();
-			}
-			else{ // normal flow to ServiceCreatorAccount
-				takeToProperActivity();
-			}
-		}
-		else{//user available
-			if(isFromLogin){
-				Integer val = Integer.parseInt(type);
-				getDataSaver().saveIsLoggedIn();
-				getDataSaver().saveHasLoggedInNow();
-				getDataSaver().saveWhoAmI(val);
-				finish();//going back to homepage; onResume will be called and fragment will be replaced by as needed
-			}
-			else{
-				new AlertDialog.Builder(com.unknownn.rentroom.OTPActivity.this)
-						.setTitle(getString(R.string.phone_number_exists))
-						.setMessage(getString(R.string.about_phone_number_exists))
-						.setCancelable(false)
-						.setPositiveButton(R.string.ok, (dialog, which) -> {
-
-							Integer val = Integer.parseInt(type);
-							DataSaver dataSaver = new DataSaver(this);
-							dataSaver.saveIsLoggedIn();
-							getDataSaver().saveHasLoggedInNow();
-							dataSaver.saveWhoAmI(val);
-
-							Intent intent = new Intent(com.unknownn.rentroom.OTPActivity.this, HomePage.class);
-							intent.putExtra("forceExit",true);
-							startActivity(intent);
-						})
-						.setNegativeButton(R.string.cancel, (dialogInterface, i) -> {
-							dialogInterface.dismiss();
-							finish();//just closing the activity
-						})
-						.show();
-			}
-		}
-	}
-
-	private void takeToProperActivity(){
-		Intent intent;
-		if(category.equalsIgnoreCase("service")){
-			intent = new Intent(com.unknownn.rentroom.OTPActivity.this, ServiceCreatorActivity.class);
-			intent.putExtra("category",category);
+	public void isUserAvailable(Boolean isUserAvailable) {
+		if(isUserAvailable == null) {
+			dismissMainDialog();
+			showAlertDialog(getString(R.string.error_occurred), getString(R.string.something_went_wrong),true);
 		}
 		else{
-			intent = new Intent(com.unknownn.rentroom.OTPActivity.this,CompleteCreateAccount.class);
+			downloadData((error, allData) -> {
+
+				dismissMainDialog();
+
+				if(error != null){
+					showAlertDialog("Error",error,false);
+					return;
+				}
+
+				BoardViewModel viewModel = new ViewModelProvider(this).get(BoardViewModel.class);
+				for(EachData data : allData){
+					viewModel.insert(data);
+				}
+
+				SharedPreferences sp = getSharedPreferences("sp",MODE_PRIVATE);
+				SharedPreferences.Editor editor = sp.edit();
+				editor.putBoolean("amILoggedIn",true);
+				editor.apply();
+
+				startActivity(new Intent(OTPActivity.this,HomePage.class));
+				overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+			});
 		}
-		intent.putExtra("phone",phone);
-		startActivity(intent);
 	}
 
-	private DataSaver getDataSaver(){
-		if(dataSaver == null){
-			dataSaver = new DataSaver(this);
+	private void downloadData(DataListener listener){
+
+		FirebaseAuth auth = FirebaseAuth.getInstance();
+		String userId = auth.getUid();
+
+		if(userId == null){
+			listener.onDataDownloaded(getString(R.string.failed_to_authenticate),null);
+			return;
 		}
-		return dataSaver;
+
+		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("data").child(userId);
+
+		ref.addListenerForSingleValueEvent(new ValueEventListener() {
+			@Override
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
+				List<EachData> list = new ArrayList<>();
+				if(snapshot.exists()) {
+					for (DataSnapshot ds : snapshot.getChildren()) {
+						try {
+							DataModel model = ds.getValue(DataModel.class);
+							if(model != null){
+								list.add(new EachData(model));
+							}
+						} catch (Exception ignored) {
+						}
+					}
+				}
+				listener.onDataDownloaded(null,list);
+			}
+
+			@Override
+			public void onCancelled(@NonNull DatabaseError error) {
+				listener.onDataDownloaded(error.getMessage(),null);
+			}
+		});
 	}
+
+	private interface DataListener{
+		void onDataDownloaded(String error, List<EachData> allData);
+	}
+
 }

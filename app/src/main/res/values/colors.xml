@@ -34,6 +34,7 @@
     <color name="light_magenta">#FBD4F0</color>
     <color name="light_blue">#D2E5FB</color>
 
+    <color name="strokeDim">#FAFAFA</color>
     <color name="teal">#23A615</color>
     <color name="red_bg">#FF0000</color>
     <color name="blue_bg">#0374FF</color>
@@ -43,5 +44,6 @@
 
     <color name="action1">#E70411</color>
     <color name="action2">#9a0312</color>
+    <color name="very_light_green">#EAFFF6</color>
 
 </resources>

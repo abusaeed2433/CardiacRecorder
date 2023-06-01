@@ -29,4 +29,10 @@
         <item name="boxBackgroundColor">@android:color/transparent</item>
     </style>
 
+    <style name="editTextStyle2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!--        <item name="hintTextColor">@color/hintColor</item>-->
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+
 </resources>

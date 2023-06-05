@@ -160,8 +160,9 @@ public class EachData implements Serializable {
      * checks if Sys Pressure is usual or not
      * @return true if Sys pressure < 90 or >140
      */
-    public boolean isSysUnusual(){
-        return sysPressure<90 || sysPressure>140;
+    public synchronized boolean isSysUnusual(){
+        boolean ok = sysPressure<90 || sysPressure>140;
+        return ok;
     }
 
     /**
@@ -169,7 +170,9 @@ public class EachData implements Serializable {
      * @return return "Sys Pressure: LOW" if Sys Pressure is < 90 && "Sys Pressure: HIGH" if Sys Pressure is > 140
      */
     public String getSysStatus(){
-        if(!isSysUnusual()) return "ok";
+        if(!isSysUnusual()) {
+            return "ok";
+        }
         if(sysPressure < 90) return "low";
         if(sysPressure > 140) return "high";
         return "ok";

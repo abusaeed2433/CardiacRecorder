@@ -24,6 +24,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -112,9 +113,14 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 	private void signInUserWithCredential(PhoneAuthCredential credential){
 		FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 		firebaseAuth.signInWithCredential(credential)
-				.addOnSuccessListener(authResult ->
-						checkUserExistence(firebaseAuth.getUid())
-				).addOnFailureListener(e -> {
+				.addOnSuccessListener(authResult -> {
+					FirebaseUser user = authResult.getUser();
+					if(user == null){
+						showAlertDialog( getString(R.string.error_occurred), getString(R.string.something_went_wrong),false);
+						return;
+					}
+					checkUserExistence(user.getUid());
+				}).addOnFailureListener(e -> {
 					dismissMainDialog();
 					String errorCode = "-1";
 					try {
@@ -124,14 +130,14 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 					switch (errorCode) {
 						case "ERROR_INVALID_PHONE_NUMBER":
 							showAlertDialog( getString(R.string.error_occurred),
-									getString(R.string.about_invalid_phone_number),false);
+									getString(R.string.about_invalid_phone_number),true);
 							break;
 						case "ERROR_INVALID_VERIFICATION_CODE":
 							showAlertDialog(getString(R.string.error_occurred)
 									,getString(R.string.invalid_otp_recheck_and_try_again),false);
 							break;
 						case "ERROR_SESSION_EXPIRED":
-							showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again),false);
+							showAlertDialog(getString(R.string.error_occurred),getString(R.string.session_expired_try_again),true);
 							break;
 						default:
 							showAlertDialog(getString(R.string.error_occurred),e.getMessage(),true);
@@ -303,7 +309,8 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 							if(model != null){
 								list.add(new EachData(model));
 							}
-						} catch (Exception ignored) {
+						} catch (Exception e) {
+							e.printStackTrace();
 						}
 					}
 				}

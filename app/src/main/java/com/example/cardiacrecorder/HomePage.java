@@ -379,7 +379,7 @@ public class HomePage extends AppCompatActivity {
         }
         else{
             if(isDoubleClickDone) {
-                finish();
+                finishAffinity();
             }
             else {
                 isDoubleClickDone = true;

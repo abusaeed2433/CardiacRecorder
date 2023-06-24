@@ -21,6 +21,14 @@
             "package_name": "com.example.cardiacrecorder",
             "certificate_hash": "8f4be526c62ca7dfe890e13fec2819c10a4ff0e1"
           }
+        },
+        {
+          "client_id": "531026849937-lg5741j2old3hlfredijknn04mk7vfcb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cardiacrecorder",
+            "certificate_hash": "4fe0154e3087a7c9c65ae5827474b2288d324156"
+          }
         }
       ],
       "api_key": [

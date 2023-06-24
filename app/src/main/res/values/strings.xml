@@ -44,6 +44,7 @@
     <string name="date_logo">date logo</string>
     <string name="clear_filter">Clear filter</string>
     <string name="_88">+88</string>
+    <string name="_88_ph">+88%1$s</string>
     <string name="can_t_be_empty">Can\'t be empty</string>
     <string name="invalid_phone_number">Invalid phone number</string>
     <string name="enter_your_phone_number">Enter your phone number</string>
@@ -71,7 +72,8 @@
     <string name="cancel">Cancel</string>
     <string name="logout">LogOut</string>
     <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out?</string>
-    <string name="please_wait">Please wait...</string>
+    <string name="please_wait">Please wait…</string>
     <string name="login">Login</string>
     <string name="failed_to_authenticate">Failed to authenticate</string>
+    <string name="_01xxxxxxxxx">01XXXXXXXXX</string>
 </resources>

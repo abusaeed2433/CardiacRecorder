@@ -13,7 +13,16 @@
           "package_name": "com.example.cardiacrecorder"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "531026849937-krqmediq2kv55p5m6bolker518t859h1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cardiacrecorder",
+            "certificate_hash": "8f4be526c62ca7dfe890e13fec2819c10a4ff0e1"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCvRkcTtHK7KwA_WRqSvfDMsTg-F_Tj3oE"

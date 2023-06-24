@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -34,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 	private void checkAndGo(){
-		String phone = String.valueOf(binding.editTextPhone.getText());
+		String phone = "+88"+ binding.editTextPhone.getText();
 		handleOTPSend(phone);
 	}
 
@@ -61,20 +62,9 @@ public class LoginActivity extends AppCompatActivity {
 			@Override
 			public void afterTextChanged(Editable editable) {
 				if(binding == null) return;
-
-				String text = editable.toString();
-				if(!text.startsWith("+88")){
-					binding.editTextPhone.setText(getString(R.string._88));
-					binding.editTextPhone.setSelection(3);
-				}
-				else{
-					binding.tilPhone.setErrorEnabled(false);
-					binding.tilPhone.setError(null);
-				}
-
+				binding.tvErrorMessage.setVisibility(View.INVISIBLE);
 			}
 		});
-
 	}
 
 	private void handleOTPSend(String phone){
@@ -83,15 +73,19 @@ public class LoginActivity extends AppCompatActivity {
 			return;
 		}
 
-		if(phone.isEmpty() || phone.equalsIgnoreCase("null")){
-			binding.tilPhone.setErrorEnabled(true);
-			binding.tilPhone.setError(getString(R.string.can_t_be_empty));
-		}
-		else if(phone.length() != 14){// 11 + 3[+88]
-			binding.tilPhone.setErrorEnabled(true);
-			binding.tilPhone.setError(getString(R.string.invalid_phone_number));
+		if(phone.length() != 14){// 11 + 3[+88]
+			binding.tvErrorMessage.setVisibility(View.VISIBLE);
+			binding.tvErrorMessage.setText(getString(R.string.invalid_phone_number));
 		}
 		else{
+			for(int i=1; i<phone.length(); i++){
+				if(phone.charAt(i) < '0' || phone.charAt(i) > '9'){
+					binding.tvErrorMessage.setVisibility(View.VISIBLE);
+					binding.tvErrorMessage.setText(getString(R.string.invalid_phone_number));
+					return;
+				}
+			}
+
 			Intent intent = new Intent(this, OTPActivity.class);
 			intent.putExtra("phone", phone);
 			startActivity(intent);

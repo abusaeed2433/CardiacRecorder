@@ -304,6 +304,7 @@ public class HomePage extends AppCompatActivity {
             SharedPreferences.Editor editor = sp.edit();
             editor.putBoolean("amILoggedIn",false);
             editor.apply();
+
             Intent intent = new Intent(HomePage.this, LoginActivity.class);
             startActivity(intent);
         });

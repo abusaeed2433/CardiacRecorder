@@ -3,6 +3,7 @@ package com.example.cardiacrecorder.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +83,9 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
         holder.tvSysPressure.setText(curItem.getSpannableSys());
         holder.tvDysPressure.setText(curItem.getSpannableDys());
         holder.tvHeartRate.setText(curItem.getSpannableHeart());
-        holder.cardView.setCardBackgroundColor(holder.itemView.getResources().getColor(getBackgroundColor(),null));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            holder.cardView.setCardBackgroundColor(holder.itemView.getResources().getColor(getBackgroundColor(),null));
+        }
 
         holder.tvSysPressure.setBackgroundResource(curItem.getSysBackground());
         holder.tvDysPressure.setBackgroundResource(curItem.getDysBackground());

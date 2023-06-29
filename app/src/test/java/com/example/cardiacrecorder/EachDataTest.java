@@ -30,7 +30,7 @@ public class EachDataTest {
     }
 
     @Test
-    public void testGetEpochDate_InvalidDate() {
+    public void testGetEpochDateInvalidDate() {
         String invalidDate = "Invalid Date";
         long expectedEpochDate = Long.MIN_VALUE;
 
@@ -279,7 +279,7 @@ public class EachDataTest {
 
         EachData eachData = new EachData(1, 123456789, "01-01-2022", "12:00AM", 120, dysPressure, 70, "Comment");
 
-        int expectedBackground = R.drawable.round_back_normal;
+        int expectedBackground = com.example.cardiacrecorder.R.drawable.round_back_normal;
         int actualBackground = eachData.getDysBackground();
 
         Assert.assertEquals(expectedBackground, actualBackground);

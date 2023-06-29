@@ -10,6 +10,9 @@ import androidx.core.content.ContextCompat;
 import com.example.cardiacrecorder.classes.EachData;
 import com.example.cardiacrecorder.databinding.ActivityDetailsBinding;
 
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+
 public class DetailsPage extends AppCompatActivity {
 
     private ActivityDetailsBinding binding;
@@ -39,8 +42,8 @@ public class DetailsPage extends AppCompatActivity {
     private void setData(EachData data){
         if(data == null) return;
 
-        binding.DetailsDate.setText(data.getDate());
-        binding.DetailsTime.setText(data.getTime());
+        binding.DetailsDate.setText(getString(R.string.date_time,formatDate(data.getDate()),data.getTime()));
+        //binding.DetailsTime.setText(data.getTime());
         binding.DetailsSysPressure.setText(data.getFormattedSysPressure());
         binding.DetailsDysPressure.setText(data.getFormattedDysPressure());
         binding.DetailsHeartRate.setText(data.getFormattedHeartRate());
@@ -81,6 +84,26 @@ public class DetailsPage extends AppCompatActivity {
             }
         }
 
+    }
+
+    /**
+     *
+     * @param date to be formatted
+     * @return date in 01Jul 2023 format
+     */
+    private String formatDate(String date){
+        try {
+            String pattern = "dd/MM/yyyy";
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+            TemporalAccessor ta = formatter.parse(date);
+
+            String newPattern = "ddMMM yyyy";
+            DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern(newPattern);
+
+            return formatter2.format(ta);
+        }catch (Exception ignored){
+            return date;
+        }
     }
 
 

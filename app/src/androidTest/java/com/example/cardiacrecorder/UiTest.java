@@ -8,8 +8,6 @@ import static androidx.test.espresso.matcher.RootMatchers.isPlatformPopup;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.CoreMatchers.allOf;
-import static org.hamcrest.CoreMatchers.anything;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.assertEquals;
 
@@ -47,23 +45,23 @@ public class UiTest {
     }
 
     @Test
-    public void runAllTest(){
-        testDeleteAll();
+    public void runAllTest(){ // will run all test in correct sequence
+        testAppName();
+        testDeleteAll(); // delete current list
 
-        addData();
-        testDetails();
+        addData(); // add single entry
+        testDetails(); // show details
 
-        testSimpleFilter();
-        testResetFilter();
+        testSimpleFilter(); // filter
+        testResetFilter(); // reset filter
 
-        editData();
-        testSingleDelete();
+        editData(); // edit data
+        testSingleDelete(); // delete single entry
 
-        addData();
-        addData();
-        testDeleteAll();
+        addData(); addData();
+        testDeleteAll(); // delete all data
+
     }
-
 
     @Test
     public void addData(){
@@ -102,7 +100,7 @@ public class UiTest {
         int curCount = getTotalItem();
 
         assertEquals(prevCount,curCount-1);
-
+        safeSleep(4);
     }
 
     @Test
@@ -120,7 +118,7 @@ public class UiTest {
         onView(withText(COMMENT)).check(matches(isDisplayed()));
 
         Espresso.pressBack();
-
+        safeSleep(4);
     }
 
     @Test
@@ -155,6 +153,7 @@ public class UiTest {
         int curCount = getTotalItem();
 
         assertEquals(prevCount,curCount);
+        safeSleep(4);
     }
 
     @Test
@@ -169,6 +168,7 @@ public class UiTest {
         int curCount = getTotalItem();
 
         assertEquals(prevCount,curCount+1);
+        safeSleep(4);
 
     }
 
@@ -181,6 +181,7 @@ public class UiTest {
                 onView(withId(R.id.rvList)).perform(
                         RecyclerViewActions.actionOnItemAtPosition(0, MyViewAction.clickChildViewWithId(R.id.ivMore))
                 );
+                safeSleep();
                 onView(withText("Delete"))
                         .inRoot(isPlatformPopup())
                         .perform(click());
@@ -191,6 +192,7 @@ public class UiTest {
         }
 
         onView(withId(R.id.tvNoData)).check(matches(isDisplayed()));
+        safeSleep(4);
     }
 
 
@@ -206,6 +208,7 @@ public class UiTest {
         onView(withId(R.id.buttonSaveFilter)).perform(click());
 
         onView(withId(R.id.tvNoData)).check(matches(not(isDisplayed())));
+        safeSleep(4);
     }
     @Test
     public void testSimpleFilter(){
@@ -219,7 +222,7 @@ public class UiTest {
         onView(withId(R.id.buttonSaveFilter)).perform(click());
 
         onView(withId(R.id.tvNoData)).check(matches(isDisplayed()));
-
+        safeSleep(4);
     }
 
     public static class MyViewAction {

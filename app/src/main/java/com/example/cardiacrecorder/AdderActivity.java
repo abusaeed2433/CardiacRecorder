@@ -72,9 +72,7 @@ public class AdderActivity extends AppCompatActivity {
         binding.editTextDysPressure.setText(getString(R.string.int_ph,data.getDysPressure()));
         binding.editTextHeartRate.setText(getString(R.string.int_ph,data.getHeartRate()));
         binding.editTextComment.setText(data.getComment());
-
         binding.buttonSave.setText(getString(R.string.update));
-
     }
 
 
@@ -137,6 +135,7 @@ public class AdderActivity extends AppCompatActivity {
                 dysP = Integer.parseInt(dys);
                 rate = Integer.parseInt(hRate);
             }catch (Exception ignored){}
+
 
 
 

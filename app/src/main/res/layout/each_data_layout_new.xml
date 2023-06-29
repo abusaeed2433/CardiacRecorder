@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemContainer"
     app:cardCornerRadius="4dp"
-    android:layout_margin="6dp">
+    android:layout_margin="6dp" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

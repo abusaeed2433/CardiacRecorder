@@ -74,7 +74,6 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
      *        item at the given position in the data set.
      * @param position The position of the item within the adapter's data set.
      */
-    @SuppressLint("NewApi")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         curItem = getItem(position);

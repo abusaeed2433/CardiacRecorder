@@ -33,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
 		binding.buttonNext.setOnClickListener(view -> checkAndGo());
 	}
 
-
 	private void checkAndGo(){
 		String phone = "+88"+ binding.editTextPhone.getText();
 		handleOTPSend(phone);

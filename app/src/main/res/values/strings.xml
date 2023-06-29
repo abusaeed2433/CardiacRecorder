@@ -55,6 +55,8 @@
         %1$s</string>
     <string name="verification_message_dummy">Please type the verification code sent to\n
         012345</string>
+
+    <string name="date_time">%1$s\n%2$s</string>
     <string name="message_icon">Message icon</string>
     <string name="otp">OTP</string>
     <string name="enter_otp_first">Enter OTP first</string>

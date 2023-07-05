@@ -62,6 +62,16 @@ public class EachData implements Serializable {
     @Exclude
     private transient SpannableString spanSys = null, spanDys = null, spanHeart = null, spanDateTime = null;
 
+    /**
+     * constructor
+     * @param timestamp
+     * @param date
+     * @param time
+     * @param sysPressure
+     * @param dysPressure
+     * @param heartRate
+     * @param comment
+     */
     public EachData(long timestamp, @NonNull String date, @NonNull String time, int sysPressure,
                     int dysPressure, int heartRate, @Nullable String comment) {
         this.timestamp = timestamp;
@@ -74,6 +84,17 @@ public class EachData implements Serializable {
         this.epochDate = getEpochDate(date);
     }
 
+    /**
+     * constructor with id
+     * @param id
+     * @param timestamp
+     * @param date
+     * @param time
+     * @param sysPressure
+     * @param dysPressure
+     * @param heartRate
+     * @param comment
+     */
     @Ignore
     public EachData(int id,long timestamp, @NonNull String date, @NonNull String time, int sysPressure,
                     int dysPressure, int heartRate, @Nullable String comment) {
@@ -88,6 +109,10 @@ public class EachData implements Serializable {
         this.epochDate = getEpochDate(date);
     }
 
+    /**
+     * constructor with model
+     * @param model
+     */
     public EachData(DataModel model) {
         id = model.id;
         timestamp = model.timestamp;
@@ -100,6 +125,13 @@ public class EachData implements Serializable {
         comment = model.comment;
     }
 
+    /**
+     * checker for sys, dys and heart rate
+     * @param sysBy
+     * @param dysBy
+     * @param heartBy
+     * @return
+     */
     public boolean isThisOK(int sysBy, int dysBy, int heartBy){
         boolean sys = sysBy == ALL ||
                 (sysBy == LOW && sysPressure < 90) ||
@@ -119,10 +151,19 @@ public class EachData implements Serializable {
         return sys && dys && heart;
     }
 
+    /**
+     * getter for date
+     * @return
+     */
     public long getEpochDate() {
         return epochDate;
     }
 
+    /**
+     * formatter for date
+     * @param date
+     * @return
+     */
     public static long getEpochDate(String date){
         try{
             String pattern = "dd/MM/yyyy";
@@ -140,10 +181,18 @@ public class EachData implements Serializable {
     }
 
 
+    /**
+     * setter for id
+     * @param id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * getter for id
+     * @return
+     */
     public int getId() {
         return id;
     }
@@ -178,6 +227,10 @@ public class EachData implements Serializable {
         return "ok";
     }
 
+    /**
+     * heart rate status checker
+     * @return
+     */
     public String getHeartRateStatus(){
         if(!isHeartRateUnusual()) return "ok";
         if(heartRate < 60) return "low";
@@ -185,18 +238,34 @@ public class EachData implements Serializable {
         return "ok";
     }
 
+    /**
+     * sys setter
+     * @param spanSys
+     */
     public void setSpanSys(SpannableString spanSys) {
         this.spanSys = spanSys;
     }
 
+    /**
+     * dys setter
+     * @param spanDys
+     */
     public void setSpanDys(SpannableString spanDys) {
         this.spanDys = spanDys;
     }
 
+    /**
+     * heart rate setter
+     * @param spanHeart
+     */
     public void setSpanHeart(SpannableString spanHeart) {
         this.spanHeart = spanHeart;
     }
 
+    /**
+     * time and date setter
+     * @param spanDateTime
+     */
     public void setSpanDateTime(SpannableString spanDateTime) {
         this.spanDateTime = spanDateTime;
     }
@@ -208,6 +277,10 @@ public class EachData implements Serializable {
         return dysPressure < 60 || dysPressure>90;
     }
 
+    /**
+     * checker for heart rate
+     * @return
+     */
     public boolean isHeartRateUnusual() {return heartRate < 60 || heartRate > 100; }
 
     /**
@@ -246,11 +319,19 @@ public class EachData implements Serializable {
 
     }
 
+    /**
+     * date getter
+     * @return
+     */
     @NonNull
     public String getDate() {
         return date;
     }
 
+    /**
+     * time getter
+     * @return
+     */
     @NonNull
     public String getTime() {
         return time;
@@ -263,6 +344,11 @@ public class EachData implements Serializable {
     public String getFormattedSysPressure(){
         return sysPressure+"mm Hg";
     }
+
+    /**
+     * sys getter
+     * @return
+     */
     public int getSysPressure() {
         return sysPressure;
     }
@@ -382,6 +468,10 @@ public class EachData implements Serializable {
         return spanDateTime;
     }
 
+    /**
+     * dys getter
+     * @return
+     */
     public int getDysPressure() {
         return dysPressure;
     }
@@ -394,19 +484,37 @@ public class EachData implements Serializable {
         return heartRate+"BPM";
     }
 
+    /**
+     * heart rate getter
+     * @return
+     */
     public int getHeartRate() {
         return heartRate;
     }
 
+    /**
+     * comment getter
+     * @return
+     */
     @Nullable
     public String getComment() {
         return comment;
     }
 
+    /**
+     * comment formatter
+     * @return
+     */
     public String getSafeComment() {
         return comment==null || comment.trim().isEmpty() ? "No comment" : comment;
     }
 
+    /**
+     * time checker and formatter
+     * @param startTime
+     * @param endTime
+     * @return
+     */
     public static String getElapsedTime(long startTime, long endTime) {
         long duration = endTime - startTime;
         long days = TimeUnit.MILLISECONDS.toDays(duration);
@@ -435,6 +543,10 @@ public class EachData implements Serializable {
         return sb.append("ago").toString();
     }
 
+    /**
+     * model getter
+     * @return
+     */
     public DataModel getModel(){
         return new DataModel(id,timestamp,date,time,epochDate,sysPressure,dysPressure,heartRate,comment);
     }

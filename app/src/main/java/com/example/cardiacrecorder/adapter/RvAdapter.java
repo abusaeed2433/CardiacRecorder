@@ -33,6 +33,10 @@ public class RvAdapter extends ListAdapter<EachData, RvAdapter.ViewHolder> {
     private AdapterListener adapterListener = null;
     int curColor = 0;
 
+    /**
+     * constructor
+     * @param mContext
+     */
     public RvAdapter(Context mContext) {
         super(diffCallback);
         this.mContext = mContext;

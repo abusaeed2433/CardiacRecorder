@@ -21,6 +21,11 @@ public class OptionAdapter extends RecyclerView.Adapter<OptionAdapter.ViewHolder
     private final ArrayList<String> options;
     private int selectedPosition = -1;
 
+    /**
+     * constructor
+     * @param mContext
+     * @param args
+     */
     public OptionAdapter(@NonNull Context mContext, String ...args) {
         this.mContext = mContext;
         this.options = new ArrayList<>();

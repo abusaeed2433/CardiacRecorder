@@ -19,6 +19,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class EachDataTest {
+    /**
+     * epoch date tester
+     */
     @Test
     public void testGetEpochDate() {
         String currentDate = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.US));
@@ -29,6 +32,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedEpochDate, epochDate);
     }
 
+    /**
+     * invalid date tester
+     */
     @Test
     public void testGetEpochDateInvalidDate() {
         String invalidDate = "Invalid Date";
@@ -39,6 +45,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedEpochDate, epochDate);
     }
 
+    /**
+     * unusual sys test
+     */
     @Test
     public void testIsSysUnusual() {
         int id = 1;
@@ -67,6 +76,9 @@ public class EachDataTest {
         Assert.assertTrue("Failed for sysPressure = 141", data.isSysUnusual());
     }
 
+    /**
+     * get sys status test
+     */
     @Test
     public void testGetSysStatus() {
         int id = 1;
@@ -89,6 +101,9 @@ public class EachDataTest {
         Assert.assertEquals("high", data.getSysStatus());
     }
 
+    /**
+     * heart rate status test
+     */
     @Test
     public void testGetHeartRateStatus() {
         int id = 1;
@@ -111,6 +126,9 @@ public class EachDataTest {
         Assert.assertEquals("high", data.getHeartRateStatus());
     }
 
+    /**
+     * dys unusual test
+     */
     @Test
     public void testIsDysUnusual() {
         int id = 1;
@@ -139,6 +157,9 @@ public class EachDataTest {
         Assert.assertFalse("Failed for dysPressure = 90", data.isDysUnusual());
     }
 
+    /**
+     * heart rate unusual test
+     */
     @Test
     public void testIsHeartRateUnusual() {
         int id = 1;
@@ -167,6 +188,9 @@ public class EachDataTest {
         Assert.assertFalse("Failed for heartRate = 100", data.isHeartRateUnusual());
     }
 
+    /**
+     * dys status test
+     */
     @Test
     public void testGetDysStatus() {
         int id = 1;
@@ -189,6 +213,9 @@ public class EachDataTest {
         Assert.assertEquals("high", data.getDysStatus());
     }
 
+    /**
+     * id same test
+     */
     @Test
     public void testIsIdSame() {
         int id1 = 1;
@@ -204,6 +231,9 @@ public class EachDataTest {
         Assert.assertFalse(isSame2);
     }
 
+    /**
+     * fully same test
+     */
     @Test
     public void testIsFullySame() {
         EachData originalData = new EachData(1, 123456789, "01-01-2023", "12:00AM", 120, 80, 70, "Comment");
@@ -217,6 +247,9 @@ public class EachDataTest {
         Assert.assertFalse(isSame2);
     }
 
+    /**
+     * formatted sys test
+     */
     @Test
     public void testGetFormattedSysPressure() {
         int id = 1;
@@ -233,6 +266,9 @@ public class EachDataTest {
         Assert.assertEquals("120mm Hg", data.getFormattedSysPressure());
     }
 
+    /**
+     * spannable sys test
+     */
     @Test
     public void testGetSpannableSys() {
         int sysPressure = 120;
@@ -261,6 +297,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedSpans.length, spans.length);
     }
 
+    /**
+     * background sys test
+     */
     @Test
     public void testGetSysBackground() {
         int sysPressure = 120;
@@ -273,6 +312,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedBackground, actualBackground);
     }
 
+    /**
+     * background dys test
+     */
     @Test
     public void testGetDysBackground() {
         int dysPressure = 80;
@@ -285,6 +327,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedBackground, actualBackground);
     }
 
+    /**
+     * heart rate background test
+     */
     @Test
     public void testGetHeartBackground() {
         int heartRate = 80;
@@ -297,6 +342,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedBackground, actualBackground);
     }
 
+    /**
+     * dys spannable test
+     */
     @Test
     public void testGetSpannableDys() {
         int dysPressure = 80;
@@ -327,6 +375,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedSpans.length, spans.length);
     }
 
+    /**
+     * heart rate spannable test
+     */
     @Test
     public void testGetSpannableHeart() {
         int heartRate = 70;
@@ -354,6 +405,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedSpans.length, spans.length);
     }
 
+    /**
+     * formatted dys test
+     */
     @Test
     public void testGetFormattedDysPressure() {
         int dysPressure = 80;
@@ -366,6 +420,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedFormattedDysPressure, formattedDysPressure);
     }
 
+    /**
+     * spannable time date test
+     */
     @Test
     public void testGetSpannableDateTime() {
         long timestamp = 123456789;
@@ -396,6 +453,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedSpans.length, spans.length);
     }
 
+    /**
+     * formatted heart rate test
+     */
     @Test
     public void testGetFormattedHeartRate() {
         int heartRate = 80;
@@ -408,6 +468,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedText, formattedHeartRate);
     }
 
+    /**
+     * safe comment test
+     */
     @Test
     public void testGetSafeComment() {
         String expectedText = "This is a comment";
@@ -419,6 +482,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedText, safeComment);
     }
 
+    /**
+     * elapsed time test
+     */
     @Test
     public void testGetElapsedTime() {
         long startTime = 123456789; // Replace with your desired start time
@@ -430,6 +496,9 @@ public class EachDataTest {
         Assert.assertEquals(expectedText, elapsedTime);
     }
 
+    /**
+     * ok test
+     */
     @Test
     public void testIsThisOK(){
         EachData eachData = new EachData(System.currentTimeMillis(),"10/10/2023","10:10PM",60,95,75,"nothing");

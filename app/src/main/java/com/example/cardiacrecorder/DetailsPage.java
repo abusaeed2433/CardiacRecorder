@@ -42,48 +42,46 @@ public class DetailsPage extends AppCompatActivity {
     private void setData(EachData data){
         if(data == null) return;
 
-        binding.DetailsDate.setText(getString(R.string.date_time,formatDate(data.getDate()),data.getTime()));
-        //binding.DetailsTime.setText(data.getTime());
-        binding.DetailsSysPressure.setText(data.getFormattedSysPressure());
-        binding.DetailsDysPressure.setText(data.getFormattedDysPressure());
-        binding.DetailsHeartRate.setText(data.getFormattedHeartRate());
-        binding.DetailsComment.setText(data.getSafeComment());
+        binding.tvDateTime.setText(getString(R.string.date_time,formatDate(data.getDate()),data.getTime()));
+        binding.tvSysPressure.setText(data.getFormattedSysPressure());
+        binding.tvDysPressure.setText(data.getFormattedDysPressure());
+        binding.tvHeartRate.setText(data.getFormattedHeartRate());
+        binding.tvComment.setText(data.getSafeComment());
 
         String text = data.getSysStatus();
-        binding.tvIndicatorSys.setText(text);
+        binding.tvIndicatorSystolic.setText(text);
 
         String text2 = data.getDysStatus();
-        binding.tvIndicatorDys.setText(text2);
+        binding.tvIndicatorDiastolic.setText(text2);
 
-        binding.tvIndicatorHeart.setText(data.getHeartRateStatus());
+        binding.tvIndicatorHeartRate.setText(data.getHeartRateStatus());
 
         if(data.isSysUnusual()){
             if(data.getSysPressure()<90){
-                binding.layoutSys.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
+                binding.viewSystolic.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
             }
             else{
-                binding.layoutSys.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
+                binding.viewSystolic.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
             }
         }
 
         if(data.isDysUnusual()){
             if(data.getDysPressure()<60){
-                binding.layoutDys.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
+                binding.viewDiastolic.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
             }
             else{
-                binding.layoutDys.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
+                binding.viewDiastolic.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
             }
         }
 
         if(data.isHeartRateUnusual()){
             if(data.getHeartRate() < 60){
-                binding.layoutHeartRate.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
+                binding.viewHeartRate.setBackgroundColor(ContextCompat.getColor(this, R.color.blue_bg));
             }
             else{
-                binding.layoutHeartRate.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
+                binding.viewHeartRate.setBackgroundColor(ContextCompat.getColor(this, R.color.red_bg));
             }
         }
-
     }
 
     /**
@@ -97,7 +95,7 @@ public class DetailsPage extends AppCompatActivity {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
             TemporalAccessor ta = formatter.parse(date);
 
-            String newPattern = "ddMMM yyyy";
+            String newPattern = "ddMMM yy";
             DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern(newPattern);
 
             return formatter2.format(ta);

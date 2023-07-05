@@ -79,7 +79,6 @@ public class UiTest {
 
         onView(ViewMatchers.withText("OK")).perform(click());
 
-
         onView(withId(R.id.editTextSysPressure)).perform(ViewActions.typeText(SYS));
 
         onView(withId(R.id.editTextDysPressure)).perform(ViewActions.typeText(DYS));

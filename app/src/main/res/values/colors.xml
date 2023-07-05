@@ -30,6 +30,7 @@
 
     <color name="light_pink">#FDD6D6</color>
     <color name="light_green">#D4FBE2</color>
+    <color name="green">#07BD07</color>
     <color name="pale_yellow">#FFF5D8</color>
     <color name="light_magenta">#FBD4F0</color>
     <color name="light_blue">#D2E5FB</color>
@@ -45,5 +46,7 @@
     <color name="action1">#E70411</color>
     <color name="action2">#9a0312</color>
     <color name="very_light_green">#EAFFF6</color>
+
+    <color name="light_gray">#FFEEEE</color>
 
 </resources>

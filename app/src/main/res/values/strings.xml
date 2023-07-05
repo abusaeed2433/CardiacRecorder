@@ -56,7 +56,7 @@
     <string name="verification_message_dummy">Please type the verification code sent to\n
         012345</string>
 
-    <string name="date_time">%1$s\n%2$s</string>
+    <string name="date_time">%1$s at %2$s</string>
     <string name="message_icon">Message icon</string>
     <string name="otp">OTP</string>
     <string name="enter_otp_first">Enter OTP first</string>
@@ -78,4 +78,7 @@
     <string name="login">Login</string>
     <string name="failed_to_authenticate">Failed to authenticate</string>
     <string name="_01xxxxxxxxx">01XXXXXXXXX</string>
+    <string name="image">image</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="diastolic_pressure">Diastolic pressure</string>
 </resources>

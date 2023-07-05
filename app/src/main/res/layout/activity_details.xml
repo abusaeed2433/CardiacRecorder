@@ -1,274 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsPage" >
+    tools:context=".DetailsPage"
+    android:padding="8dp"
+    android:background="#F8F8F8">
 
     <ScrollView
         android:id="@+id/scroll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <GridLayout
-                android:id="@+id/grid1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:rowCount="3">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_rowWeight="1"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:background="@color/teal"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/DetailsDate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="serif"
-                            tools:text="Date\nTime"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.5" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    
-                </androidx.cardview.widget.CardView>
-                
-                <androidx.cardview.widget.CardView
-                    android:transitionName="sys_pressure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="0"
-                    android:layout_rowWeight="1"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:id="@+id/layoutSys"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:background="@color/teal"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:textColor="@color/white"
-                            android:id="@+id/tvIndicatorSys"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            tools:text="status 1"
-                            android:textSize="16sp"
-                            android:padding="4dp"
-                            android:background="@drawable/details_round"
-                            android:backgroundTint="@color/black"
-                            android:fontFamily="serif"/>
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:contentDescription="@string/systolic_pressure"
-                            android:src="@drawable/sys_pressure2" />
-
-                        <TextView
-                            android:id="@+id/DetailsSysPressure"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:textColor="@color/white"
-                            tools:text="sys"
-                            android:textAlignment="center"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:fontFamily="serif"/>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:transitionName="dys_pressure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_rowWeight="1"
-                    android:layout_column="0"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:id="@+id/layoutDys"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:background="@color/teal"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:textColor="@color/white"
-                            android:id="@+id/tvIndicatorDys"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            tools:text="status 1"
-                            android:textSize="16sp"
-                            android:padding="4dp"
-                            android:background="@drawable/details_round"
-                            android:backgroundTint="@color/black"
-                            android:fontFamily="serif"/>
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-                            android:contentDescription="@string/dys_pressure"
-                            android:src="@drawable/dys_pressure2" />
-
-                        <TextView
-                            android:id="@+id/DetailsDysPressure"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            tools:text="dys"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:fontFamily="serif"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:transitionName="heart_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_row="1"
-                    android:layout_rowWeight="1"
-                    android:layout_column="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:id="@+id/layoutHeartRate"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:background="@color/teal"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:textColor="@color/white"
-                            android:id="@+id/tvIndicatorHeart"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            tools:text="status 1"
-                            android:textSize="16sp"
-                            android:padding="4dp"
-                            android:background="@drawable/details_round"
-                            android:backgroundTint="@color/black"
-                            android:fontFamily="serif"/>
-
-                        <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:contentDescription="@string/heart_rate"
-                            android:src="@drawable/heart_beat2" />
-
-                        <TextView
-                            android:id="@+id/DetailsHeartRate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
-                            android:textColor="@color/white"
-                            tools:text="beat"
-                            android:textAlignment="center"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:fontFamily="serif"/>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
+                android:id="@+id/cardView0"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/grid1"
-                android:layout_margin="8dp"
-                app:cardCornerRadius="8dp" >
+                app:layout_constraintEnd_toStartOf="@+id/cardView1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/teal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="4dp">
 
                     <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="8dp"
-                        android:contentDescription="@string/comment"
-                        android:src="@drawable/comment2" />
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@string/image"
+                        android:padding="10dp"
+                        android:src="@drawable/date_time" />
 
                     <TextView
-                        android:id="@+id/DetailsComment"
-                        android:textColor="@color/white"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:text="@string/comment"
-                        android:textAlignment="center"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif"/>
+                        android:layout_marginTop="10dp"
+                        android:text="@string/date_and_time"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/viewDateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/dark_gray" />
+
+                    <TextView
+                        android:id="@+id/tvDateTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textSize="14sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/black"
+                        tools:text="01Jun 23 at 11:14PM" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-        </RelativeLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@string/image"
+                        android:padding="10dp"
+                        android:src="@drawable/systolic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/systolic_pressure"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/viewSystolic"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/green" />
+
+                    <TextView
+                        android:id="@+id/tvSysPressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textSize="14sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/black"
+                        tools:text="90 mmHg" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/cardView0"
+                app:layout_constraintWidth_percent="0.48">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@string/image"
+                        android:padding="10dp"
+                        android:src="@drawable/diastolic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/diastolic_pressure"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/viewDiastolic"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/green" />
+
+                    <TextView
+                        android:id="@+id/tvDysPressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textSize="14sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/black"
+                        tools:text="80 mmHg" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@id/cardView1"
+                app:layout_constraintWidth_percent="0.48">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@string/image"
+                        android:padding="10dp"
+                        android:src="@drawable/heart_rate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/heart_rate"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/viewHeartRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/green" />
+
+                    <TextView
+                        android:id="@+id/tvHeartRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textSize="14sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/black"
+                        tools:text="140 BPM" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                app:layout_constraintWidth_percent="0.96">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:contentDescription="@string/image"
+                        android:padding="10dp"
+                        android:src="@drawable/comment" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/comment"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/dark_gray" />
+
+                    <TextView
+                        android:id="@+id/tvComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textSize="14sp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/black"
+                        tools:text="hello test" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tvIndicatorSystolic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintWidth_percent="0.15"
+                android:gravity="center"
+                android:background="@drawable/details_round"
+                android:backgroundTint="#E0FFEB"
+                android:elevation="2dp"
+                android:fontFamily="serif"
+                android:padding="4dp"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView1"
+                app:layout_constraintTop_toTopOf="@+id/cardView1"
+                tools:text="ok" />
+
+            <TextView
+                android:id="@+id/tvIndicatorDiastolic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintWidth_percent="0.15"
+                android:gravity="center"
+                android:background="@drawable/details_round"
+                android:backgroundTint="#E0FFEB"
+                android:elevation="2dp"
+                android:fontFamily="serif"
+                android:padding="4dp"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toTopOf="@+id/cardView2"
+                tools:text="low" />
+
+            <TextView
+                android:id="@+id/tvIndicatorHeartRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintWidth_percent="0.15"
+                android:background="@drawable/details_round"
+                android:backgroundTint="#E0FFEB"
+                android:gravity="center"
+                android:elevation="2dp"
+                android:fontFamily="serif"
+                android:padding="4dp"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toTopOf="@+id/cardView3"
+                tools:text="low" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

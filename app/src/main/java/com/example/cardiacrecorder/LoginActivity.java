@@ -17,6 +17,13 @@ public class LoginActivity extends AppCompatActivity {
 	private Toast mToast;
 	private ActivityLoginBinding binding = null;
 
+	/**
+	 * login method on create and data setter
+	 * @param savedInstanceState If the activity is being re-initialized after
+	 *     previously being shut down then this Bundle contains the data it most
+	 *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+	 *
+	 */
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,16 +35,26 @@ public class LoginActivity extends AppCompatActivity {
 	}
 
 
+	/**
+	 * on click listener
+	 */
 	private void setClickListener(){
 		if(binding == null) return;
 		binding.buttonNext.setOnClickListener(view -> checkAndGo());
 	}
 
+	/**
+	 * checker
+	 */
 	private void checkAndGo(){
 		String phone = "+88"+ binding.editTextPhone.getText();
 		handleOTPSend(phone);
 	}
 
+	/**
+	 * toast shower
+	 * @param message
+	 */
 	private void showSafeToast(String message){
 		try {
 			mToast.cancel();
@@ -46,6 +63,9 @@ public class LoginActivity extends AppCompatActivity {
 		}catch (Exception ignored){}
 	}
 
+	/**
+	 * edit text listener
+	 */
 	private void setEditTextListener(){
 		binding.editTextPhone.addTextChangedListener(new TextWatcher() {
 			@Override
@@ -66,6 +86,10 @@ public class LoginActivity extends AppCompatActivity {
 		});
 	}
 
+	/**
+	 * otp sender
+	 * @param phone
+	 */
 	private void handleOTPSend(String phone){
 		if(binding == null){
 			showSafeToast(getString(R.string.something_went_wrong));
@@ -91,6 +115,9 @@ public class LoginActivity extends AppCompatActivity {
 		}
 	}
 
+	/**
+	 * back pressed method
+	 */
 	@Override
 	public void onBackPressed() {
 		finishAffinity();

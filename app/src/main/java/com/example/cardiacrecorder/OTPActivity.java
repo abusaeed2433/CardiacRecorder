@@ -46,6 +46,13 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 
 	private com.example.cardiacrecorder.databinding.ActivityOtpBinding binding = null;
 
+	/**
+	 * otp on create method an data set
+	 * @param savedInstanceState If the activity is being re-initialized after
+	 *     previously being shut down then this Bundle contains the data it most
+	 *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+	 *
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -81,6 +88,12 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 	}
 
 
+	/**
+	 * option item selector override
+	 * @param item The menu item that was selected.
+	 *
+	 * @return
+	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
@@ -90,12 +103,20 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		return super.onOptionsItemSelected(item);
 	}
 
+	/**
+	 * snack bar message shower
+	 * @param message
+	 */
 	private void showSnackBar(String message){
 		Snackbar snackbar = Snackbar.make(findViewById(R.id.constraintLayoutLogin),message,Snackbar.LENGTH_SHORT);
 		snackbar.setAction(android.R.string.ok, view -> snackbar.dismiss());
 		snackbar.show();
 	}
 
+	/**
+	 * user checker
+	 * @param userId
+	 */
 	private void checkUserExistence(String userId){
 		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("data").child(userId);
 		ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -110,6 +131,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		});
 	}
 
+	/**
+	 * sign in method
+	 * @param credential
+	 */
 	private void signInUserWithCredential(PhoneAuthCredential credential){
 		FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 		firebaseAuth.signInWithCredential(credential)
@@ -145,6 +170,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		});
 	}
 
+	/**
+	 * code verifier
+	 * @param code
+	 */
 	private void verifyCode(String code){
 		try{
 			PhoneAuthCredential credential = PhoneAuthProvider.getCredential(codeByGoogle,code);
@@ -156,6 +185,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		}
 	}
 
+	/**
+	 * verification code sender
+	 * @param phone
+	 */
 	private void sendVerificationCode(String phone){
 		PhoneAuthOptions options =
 				PhoneAuthOptions.newBuilder(FirebaseAuth.getInstance())
@@ -167,8 +200,16 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		PhoneAuthProvider.verifyPhoneNumber(options);
 	}
 
+	/**
+	 * call back initializer modified
+	 */
 	private void initializeCallBack(){
 		mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+			/**
+			 * verification complete handler
+			 * @param credential
+			 */
 			@Override
 			public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
 				String code = credential.getSmsCode(); // code from sms, automatically retrieved by google,
@@ -179,6 +220,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				verifyCode(code);
 			}
 
+			/**
+			 * verification failed handler
+			 * @param e
+			 */
 			@Override
 			public void onVerificationFailed(@NonNull FirebaseException e) {
 				dismissMainDialog();
@@ -205,6 +250,11 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				}
 			}
 
+			/**
+			 * code sent handler
+			 * @param verificationId
+			 * @param token
+			 */
 			@Override
 			public void onCodeSent(@NonNull String verificationId,
 			                       @NonNull PhoneAuthProvider.ForceResendingToken token) {
@@ -215,6 +265,12 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		};
 	}
 
+	/**
+	 * dialog message shower
+	 * @param title
+	 * @param message
+	 * @param shouldExit
+	 */
 	private void showAlertDialog(String title,String message, boolean shouldExit){
 		new AlertDialog.Builder(this)
 				.setTitle(title)
@@ -227,12 +283,19 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				.show();
 	}
 
+	/**
+	 * main dialog handler
+	 */
 	private void dismissMainDialog(){
 		try {
 			mainDialog.dismiss();
 		}catch (Exception ignored){}
 	}
 
+	/**
+	 * progress shower
+	 * @param isFromVerify
+	 */
 	private void showProgress(boolean isFromVerify) {
 		mainDialog = new Dialog(this);
 		mainDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -254,6 +317,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		mainDialog.show();
 	}
 
+	/**
+	 * check user availability
+	 * @param isUserAvailable
+	 */
 	@Override
 	public void isUserAvailable(Boolean isUserAvailable) {
 		if(isUserAvailable == null) {
@@ -286,6 +353,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		}
 	}
 
+	/**
+	 * data download from firebase
+	 * @param listener
+	 */
 	private void downloadData(DataListener listener){
 
 		FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -299,6 +370,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("data").child(userId);
 
 		ref.addListenerForSingleValueEvent(new ValueEventListener() {
+			/**
+			 * data change handler
+			 * @param snapshot The current data at the location
+			 */
 			@Override
 			public void onDataChange(@NonNull DataSnapshot snapshot) {
 				List<EachData> list = new ArrayList<>();
@@ -317,6 +392,10 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 				listener.onDataDownloaded(null,list);
 			}
 
+			/**
+			 * on cancel handler
+			 * @param error A description of the error that occurred
+			 */
 			@Override
 			public void onCancelled(@NonNull DatabaseError error) {
 				listener.onDataDownloaded(error.getMessage(),null);
@@ -324,6 +403,9 @@ public class OTPActivity extends AppCompatActivity implements CallBackUserChecke
 		});
 	}
 
+	/**
+	 * data listener
+	 */
 	private interface DataListener{
 		void onDataDownloaded(String error, List<EachData> allData);
 	}

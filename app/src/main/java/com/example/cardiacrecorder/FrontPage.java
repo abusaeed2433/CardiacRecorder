@@ -16,6 +16,13 @@ public class FrontPage extends AppCompatActivity {
 
     private ActivityFrontPageBinding binding = null;
 
+    /**
+     * front page on create and data setter
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,9 @@ public class FrontPage extends AppCompatActivity {
 
     }
 
+    /**
+     * on destroy method override
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

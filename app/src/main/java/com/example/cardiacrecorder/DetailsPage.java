@@ -17,6 +17,13 @@ public class DetailsPage extends AppCompatActivity {
 
     private ActivityDetailsBinding binding;
 
+    /**
+     * on create for details page and data setter
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +112,12 @@ public class DetailsPage extends AppCompatActivity {
     }
 
 
+    /**
+     * options selected method override
+     * @param item The menu item that was selected.
+     *
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -115,6 +128,9 @@ public class DetailsPage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * on back pressed method override
+     */
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -122,6 +138,9 @@ public class DetailsPage extends AppCompatActivity {
     }
 
 
+    /**
+     * on destroy method override
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

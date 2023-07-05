@@ -20,10 +20,21 @@ import java.util.Locale;
 public class MyTimePicker extends DialogFragment implements TimePickerDialog.OnTimeSetListener {
     private final StringListener listener;
 
+    /**
+     * setter for time picker
+     * @param listener
+     */
     public MyTimePicker(StringListener listener){
         this.listener = listener;
     }
 
+    /**
+     * time picker dialog creator
+     * @param savedInstanceState The last saved instance state of the Fragment,
+     * or null if this is a freshly created Fragment.
+     *
+     * @return
+     */
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -39,6 +50,12 @@ public class MyTimePicker extends DialogFragment implements TimePickerDialog.OnT
     }
 
 
+    /**
+     * time formatter and setter
+     * @param timePicker the view associated with this listener
+     * @param hour the hour that was set
+     * @param min the minute that was set
+     */
     @Override
     public void onTimeSet(TimePicker timePicker, int hour, int min) {
 

@@ -15,6 +15,10 @@ public class BoardViewModel extends AndroidViewModel {
     private final BoardRepository repository;
     private final LiveData<List<EachData>> allData;
 
+    /**
+     * constructor
+     * @param application
+     */
     public BoardViewModel(@NonNull Application application) {
         super(application);
         repository = new BoardRepository(application);
@@ -45,6 +49,9 @@ public class BoardViewModel extends AndroidViewModel {
         repository.delete(data);
     }
 
+    /**
+     * deleting data
+     */
     public void deleteAll(){
         repository.deleteAll();
     }

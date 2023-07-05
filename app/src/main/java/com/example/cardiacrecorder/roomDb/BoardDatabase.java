@@ -13,6 +13,11 @@ import com.example.cardiacrecorder.classes.EachData;
 public abstract class BoardDatabase extends RoomDatabase {
 
     private static BoardDatabase instance;
+
+    /**
+     * constructor
+     * @return
+     */
     public abstract BoardDao boardDao();
 
     /**

@@ -20,10 +20,21 @@ public class MyDatePicker extends DialogFragment implements DatePickerDialog.OnD
 
     private final StringListener listener;
 
+    /**
+     * date picker setter
+     * @param listener
+     */
     public MyDatePicker(StringListener listener){
         this.listener = listener;
     }
 
+    /**
+     * on create dialog creator
+     * @param savedInstanceState The last saved instance state of the Fragment,
+     * or null if this is a freshly created Fragment.
+     *
+     * @return
+     */
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
@@ -37,6 +48,15 @@ public class MyDatePicker extends DialogFragment implements DatePickerDialog.OnD
         return new DatePickerDialog(requireContext(), this, year, month, day);
     }
 
+    /**
+     * date setter
+     * @param datePicker the picker associated with the dialog
+     * @param year the selected year
+     * @param month the selected month (0-11 for compatibility with
+     *              {@link Calendar#MONTH})
+     * @param day the selected day of the month (1-31, depending on
+     *                   month)
+     */
     @Override
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
 

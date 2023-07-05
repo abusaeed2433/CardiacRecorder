@@ -15,6 +15,15 @@ public class FilterViewModel extends ViewModel {
     private final MutableLiveData<Boolean> trigger = new MutableLiveData<>(false);
     private boolean localTrigger = false;
 
+    /**
+     * setter for all data
+     * @param fromDate
+     * @param toDate
+     * @param sortBy
+     * @param sysBy
+     * @param dysBy
+     * @param heartBy
+     */
     public void setAll(String fromDate, String toDate, int sortBy, int sysBy, int dysBy, int heartBy){
         this.fromDate = fromDate;
         this.toDate = toDate;
@@ -28,39 +37,75 @@ public class FilterViewModel extends ViewModel {
         trigger.setValue(localTrigger);
     }
 
+    /**
+     * from date getter
+     * @return
+     */
     public String getFromDate() {
         return fromDate;
     }
 
+    /**
+     * to date getter
+     * @return
+     */
     public String getToDate() {
         return toDate;
     }
 
+    /**
+     * sorting getter
+     * @return
+     */
     public int getSortBy() {
         return sortBy;
     }
 
+    /**
+     * sys sort getter
+     * @return
+     */
     public int getSysBy() {
         return sysBy;
     }
 
+    /**
+     * dys sort getter
+     * @return
+     */
     public int getDysBy() {
         return dysBy;
     }
 
+    /**
+     * heart rate sort getter
+     * @return
+     */
     public int getHeartBy() {
         return heartBy;
     }
 
 
+    /**
+     * shower getter with value
+     * @param showOrHide
+     */
     public void setShowOrHide(boolean showOrHide){
         this.showOrHide.setValue(showOrHide);
     }
 
+    /**
+     * shower getter
+     * @return
+     */
     public MutableLiveData<Boolean> getShowOrHide() {
         return showOrHide;
     }
 
+    /**
+     * trigger getter
+     * @return
+     */
     public MutableLiveData<Boolean> getTrigger() {
         return trigger;
     }

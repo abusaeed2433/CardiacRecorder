@@ -16,6 +16,10 @@ public class BoardRepository {//Repository Link Notice
     private final BoardDao boardDao;
     private final LiveData<List<EachData>> allData;
 
+    /**
+     * constructor
+     * @param application
+     */
     public BoardRepository(Application application){//application is a subclass of context
         BoardDatabase boardDatabase = BoardDatabase.getInstance(application);
         boardDao = boardDatabase.boardDao();
@@ -57,6 +61,9 @@ public class BoardRepository {//Repository Link Notice
         executor.execute(() -> boardDao.delete(data));
     }
 
+    /**
+     * delete method
+     */
     public void deleteAll(){
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.execute(boardDao::deleteAll);

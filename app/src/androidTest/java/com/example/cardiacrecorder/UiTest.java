@@ -39,11 +39,17 @@ public class UiTest {
     public ActivityScenarioRule<HomePage> activityRule = new ActivityScenarioRule<>(HomePage.class);
 
 
+    /**
+     * app name tester
+     */
     @Test
     public void testAppName() {
         onView(withText(R.string.app_name)).check(matches(isDisplayed()));
     }
 
+    /**
+     * all test runner
+     */
     @Test
     public void runAllTest(){ // will run all test in correct sequence
         testAppName();
@@ -63,6 +69,9 @@ public class UiTest {
 
     }
 
+    /**
+     * add data test
+     */
     @Test
     public void addData(){
 
@@ -85,6 +94,8 @@ public class UiTest {
 
         onView(withId(R.id.editTextHeartRate)).perform(ViewActions.typeText(HEART));
 
+        Espresso.pressBack(); //hide keyboard
+
         onView(withId(R.id.editTextComment)).perform(ViewActions.typeText(COMMENT));
 
         Espresso.pressBack(); //hide keyboard
@@ -102,6 +113,9 @@ public class UiTest {
         safeSleep(4);
     }
 
+    /**
+     * test details method
+     */
     @Test
     public void testDetails(){
 
@@ -109,7 +123,7 @@ public class UiTest {
 
         onView(withId(R.id.rvList)).perform(RecyclerViewActions.actionOnItemAtPosition(index, click()));
 
-        onView(withId(R.id.DetailsSysPressure)).check(matches(isDisplayed()));
+        onView(withId(R.id.tvSysPressure)).check(matches(isDisplayed()));
 
         onView(withText(SYS +"mm Hg")).check(matches(isDisplayed()));
         onView(withText(DYS +"mm Hg")).check(matches(isDisplayed()));
@@ -120,6 +134,9 @@ public class UiTest {
         safeSleep(4);
     }
 
+    /**
+     * edit data test
+     */
     @Test
     public void editData(){
 
@@ -136,6 +153,8 @@ public class UiTest {
 
         onView(withId(R.id.editTextHeartRate)).perform(clearText());
         onView(withId(R.id.editTextHeartRate)).perform(ViewActions.typeText(HEART_NEW));
+
+        Espresso.pressBack(); //hide keyboard
 
         onView(withId(R.id.editTextComment)).perform(clearText());
         onView(withId(R.id.editTextComment)).perform(ViewActions.typeText(COMMENT_NEW));
@@ -155,6 +174,9 @@ public class UiTest {
         safeSleep(4);
     }
 
+    /**
+     * single data test
+     */
     @Test
     public void testSingleDelete(){
         onView(withId(R.id.rvList)).perform(
@@ -172,6 +194,9 @@ public class UiTest {
     }
 
 
+    /**
+     * delete all test
+     */
     @Test
     public void testDeleteAll(){
 
@@ -195,6 +220,9 @@ public class UiTest {
     }
 
 
+    /**
+     * reset filter test
+     */
     @Test
     public void testResetFilter(){
         onView(withId(R.id.clFilterOption)).perform(click());
@@ -209,6 +237,10 @@ public class UiTest {
         onView(withId(R.id.tvNoData)).check(matches(not(isDisplayed())));
         safeSleep(4);
     }
+
+    /**
+     * simple filter test
+     */
     @Test
     public void testSimpleFilter(){
         onView(withId(R.id.clFilterOption)).perform(click());
@@ -224,20 +256,40 @@ public class UiTest {
         safeSleep(4);
     }
 
+    /**
+     * view action handler
+     */
     public static class MyViewAction {
 
+        /**
+         * view action test
+         * @param id
+         * @return
+         */
         public static ViewAction clickChildViewWithId(final int id) {
+            /**
+             * view action creator
+             */
             return new ViewAction() {
                 @Override
                 public Matcher<View> getConstraints() {
                     return ViewMatchers.isAssignableFrom(RecyclerView.class);
                 }
 
+                /**
+                 * description getter
+                 * @return
+                 */
                 @Override
                 public String getDescription() {
                     return "Click on a child view with specified id.";
                 }
 
+                /**
+                 * performer
+                 * @param uiController the controller to use to interact with the UI.
+                 * @param view the view to act upon. never null.
+                 */
                 @Override
                 public void perform(UiController uiController, View view) {
                     View v = view.findViewById(id);
@@ -248,6 +300,10 @@ public class UiTest {
 
     }
 
+    /**
+     * total item getter
+     * @return
+     */
     private int getTotalItem(){
         final int[] initialItemCount = new int[1];
         activityRule.getScenario().onActivity(activity -> {
@@ -259,6 +315,10 @@ public class UiTest {
     }
 
 
+    /**
+     * safe log tester
+     * @param args
+     */
     private static void safeSleep(long ...args){
         try{
             Thread.sleep(args.length > 0 ? args[0]*500 : 500);

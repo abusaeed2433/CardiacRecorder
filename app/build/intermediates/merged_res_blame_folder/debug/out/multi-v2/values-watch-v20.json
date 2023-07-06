@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.cardiacrecorder.app-mergeDebugResources-39:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "D:\\Android\\.jdks\\openjdk-18.0.1.1\\caches\\transforms-3\\7da6f43310809f193642bcd432c58c1b\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

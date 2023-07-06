@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://cardiacrecorder-cd2a1-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">531026849937</string>
+    <string name="google_api_key" translatable="false">AIzaSyCvRkcTtHK7KwA_WRqSvfDMsTg-F_Tj3oE</string>
+    <string name="google_app_id" translatable="false">1:531026849937:android:a49c7de4ca90aff26e8f30</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCvRkcTtHK7KwA_WRqSvfDMsTg-F_Tj3oE</string>
+    <string name="google_storage_bucket" translatable="false">cardiacrecorder-cd2a1.appspot.com</string>
+    <string name="project_id" translatable="false">cardiacrecorder-cd2a1</string>
+</resources>

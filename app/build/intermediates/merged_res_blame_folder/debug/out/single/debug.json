@@ -1,0 +1,354 @@
+[
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_shadow_back_up.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/shadow_back_up.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_each_data_layout.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/each_data_layout.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_round_back_down.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/round_back_down.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_date.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/date.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_single_option_background.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/single_option_background.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_clock2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/clock2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_baseline_logout_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/baseline_logout_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_adder.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_adder.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/raw_lottie_message.json.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/raw/lottie_message.json"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/raw_verification.json.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/raw/verification.json"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_filter_option_full.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/filter_option_full.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_icon_priority_high_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/icon_priority_high_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_gradient4.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/gradient4.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_date2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/date2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_single_option_checked_background.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/single_option_checked_background.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_diastolic.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/diastolic.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_icon_add.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/icon_add.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_round_back_up.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/round_back_up.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_baseline_calendar_month_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/baseline_calendar_month_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_dys_pressure.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/dys_pressure.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_baseline_more_vert_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_baseline_more_vert_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_arrow_small.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_arrow_small.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_heart_rate.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/heart_rate.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_each_data_layout_new.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/each_data_layout_new.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/raw_heart_rate.json.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/raw/heart_rate.json"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_date_time.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/date_time.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_front_page.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_front_page.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/xml_backup_rules.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/menu_popup_menu.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/menu/popup_menu.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_round_back_normal.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/round_back_normal.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_homepage.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_homepage.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_gradient3.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/gradient3.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_single_option.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/single_option.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_custom_progress_bar.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/custom_progress_bar.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_filter_black.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/filter_black.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_dys_pressure2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/dys_pressure2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_clock.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/clock.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/menu_action_bar_menu.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/menu/action_bar_menu.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_little_round_stroke.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/little_round_stroke.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_gradient2.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/gradient2.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_systolic.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/systolic.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_comment2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/comment2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_details_round.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/details_round.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_heart_beat2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/heart_beat2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_sys_pressure2.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/sys_pressure2.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_wave.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/wave.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_baseline_message_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_baseline_message_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.cardiacrecorder.app-pngs-37:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_baseline_more_horiz_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_baseline_more_horiz_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/xml_activity_front_page_scene.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/xml/activity_front_page_scene.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_dim_stroke_only.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/dim_stroke_only.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_bg.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/bg.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_shadow_back_down.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/shadow_back_down.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/raw_love_heart.json.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/raw/love_heart.json"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_heart_beat.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/heart_beat.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_baseline_edit_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_baseline_edit_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_baseline_check_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/baseline_check_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_round_stroke_with_ripple.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/round_stroke_with_ripple.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_heart.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/heart.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_gradient1.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/gradient1.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_baseline_close_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/baseline_close_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_button_ripple_back.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/button_ripple_back.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_otp.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_otp.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_sys_pressure.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/sys_pressure.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_comment.png.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/comment.png"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_login.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_rectangle.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/rectangle.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/drawable_ic_baseline_delete_forever_24.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/drawable/ic_baseline_delete_forever_24.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-merged_res-41:/layout_activity_details.xml.flat",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_details.xml"
+    }
+]

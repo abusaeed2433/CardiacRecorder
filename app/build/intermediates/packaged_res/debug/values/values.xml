@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="action1">#E70411</color>
+    <color name="action2">#9a0312</color>
+    <color name="arrow_disabled_color">#D5D5D5</color>
+    <color name="black">#FF000000</color>
+    <color name="black_white">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="blue_bg">#0374FF</color>
+    <color name="color_gray">#808080</color>
+    <color name="dark_gray">#A9A9A9</color>
+    <color name="dim_black">#3C3C3C</color>
+    <color name="green">#07BD07</color>
+    <color name="hint_color">#808080</color>
+    <color name="hint_tv_color">#345B8A</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="light_blue">#D2E5FB</color>
+    <color name="light_gray">#FFEEEE</color>
+    <color name="light_green">#D4FBE2</color>
+    <color name="light_magenta">#FBD4F0</color>
+    <color name="light_pink">#FDD6D6</color>
+    <color name="lightest_white">#F8F8F8</color>
+    <color name="neu_background_main">#f5ffff</color>
+    <color name="neu_bottom_right_main">#d0d9d9</color>
+    <color name="neu_top_left_main">#FFFFFF</color>
+    <color name="pale_yellow">#FFF5D8</color>
+    <color name="powder_blue">#c5e4ff</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="red_bg">#FF0000</color>
+    <color name="sky_blue">#aec8ff</color>
+    <color name="strokeDim">#FAFAFA</color>
+    <color name="teal">#23A615</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="text_color">#414141</color>
+    <color name="text_color_dim">#484848</color>
+    <color name="very_light_blue">#E9F8FF</color>
+    <color name="very_light_green">#EAFFF6</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="_00">00</string>
+    <string name="_01xxxxxxxxx">01XXXXXXXXX</string>
+    <string name="_10_11_2023">10/11/2023</string>
+    <string name="_10_25">10:25PM</string>
+    <string name="_60">60</string>
+    <string name="_70">70</string>
+    <string name="_88">+88</string>
+    <string name="_88_ph">+88%1$s</string>
+    <string name="about_create_account_phone_not_found">You don\'t have any account with this phone number. Please create a account first, then login</string>
+    <string name="about_invalid_phone_number">Invalid phone number</string>
+    <string name="add_measurement">add measurement</string>
+    <string name="app_name">CardiacRecorder</string>
+    <string name="apply_filter">Apply filter</string>
+    <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out?</string>
+    <string name="calendar_icon">Calendar icon</string>
+    <string name="can_t_be_empty">Can\'t be empty</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_filter">Clear filter</string>
+    <string name="click_again_to_exit">Click again to exit</string>
+    <string name="clock_logo">clock logo</string>
+    <string name="comment">Comment</string>
+    <string name="create_account">Create account</string>
+    <string name="dash_only">---</string>
+    <string name="dashed_date">--/--/----</string>
+    <string name="date">Date</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="date_format">Date (dd/MM/yyyy)</string>
+    <string name="date_logo">date logo</string>
+    <string name="date_time">%1$s at %2$s</string>
+    <string name="delete">Delete</string>
+    <string name="diastolic_pressure">Diastolic pressure</string>
+    <string name="down_arrow">Down arrow</string>
+    <string name="dys_pressure">Dys pressure</string>
+    <string name="dys_pressure_mm_hg">Dys pressure (mm Hg)</string>
+    <string name="edit">Edit</string>
+    <string name="enter_any_message">Enter any message</string>
+    <string name="enter_otp_first">Enter OTP first</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="error_occurred">Error occurred</string>
+    <string name="failed_to_authenticate">Failed to authenticate</string>
+    <string name="filter">Filter</string>
+    <string name="firebase_database_url" translatable="false">https://cardiacrecorder-cd2a1-default-rtdb.firebaseio.com</string>
+    <string name="from_date">From date</string>
+    <string name="gcm_defaultSenderId" translatable="false">531026849937</string>
+    <string name="google_api_key" translatable="false">AIzaSyCvRkcTtHK7KwA_WRqSvfDMsTg-F_Tj3oE</string>
+    <string name="google_app_id" translatable="false">1:531026849937:android:a49c7de4ca90aff26e8f30</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCvRkcTtHK7KwA_WRqSvfDMsTg-F_Tj3oE</string>
+    <string name="google_storage_bucket" translatable="false">cardiacrecorder-cd2a1.appspot.com</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="heart_rate_bpm">Heart Rate (BPM)</string>
+    <string name="image">image</string>
+    <string name="int_ph">%1$d</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="invalid_otp_recheck_and_try_again">Invalid OTP</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="login">Login</string>
+    <string name="logout">LogOut</string>
+    <string name="message_icon">Message icon</string>
+    <string name="more_options">More options</string>
+    <string name="next">Next</string>
+    <string name="no_data_found">No data found</string>
+    <string name="otp">OTP</string>
+    <string name="phone_number">Phone number</string>
+    <string name="phone_number_not_found">Phone number not found</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="previous_item">Previous item</string>
+    <string name="project_id" translatable="false">cardiacrecorder-cd2a1</string>
+    <string name="save">Save</string>
+    <string name="search">Search</string>
+    <string name="search_keyword">Search key</string>
+    <string name="select_type">Select type</string>
+    <string name="sending_otp">Sending OTP. Please wait …</string>
+    <string name="session_expired_try_again">Session expired. Try again later</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="sort_by">Sort By</string>
+    <string name="sys_pressure_mm_hg">Sys pressure (mm Hg)</string>
+    <string name="systolic_pressure">Systolic pressure</string>
+    <string name="time">Time</string>
+    <string name="time_format">Time (hh:mm:a)</string>
+    <string name="to_date">To date</string>
+    <string name="unusual_dys_pressure">Unusual dys pressure</string>
+    <string name="update">Update</string>
+    <string name="verification_message">Please type the verification code sent to\n
+        %1$s</string>
+    <string name="verification_message_dummy">Please type the verification code sent to\n
+        012345</string>
+    <string name="verify">Verify</string>
+    <string name="verifying_otp">Verifying OTP…</string>
+    <style name="AppThemeWithClose" parent="Theme.CardiacRecorder">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="homeAsUpIndicator">@drawable/baseline_close_24</item>
+    </style>
+    <style name="Theme.CardiacRecorder" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        
+
+
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+        <item name="android:forceDarkAllowed" ns1:targetApi="q">false</item>
+    </style>
+    <style name="customExposedStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="colorAccent">@color/text_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="hintTextColor">@color/hint_color</item>
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+    </style>
+    <style name="editTextStyle2" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <item name="boxStrokeWidth">1dp</item>
+    </style>
+</resources>

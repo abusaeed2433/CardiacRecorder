@@ -1,0 +1,532 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+MERGED from [androidx.databinding:viewbinding:8.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\a963792592080ec8c5e51ec6bd1fcf96\transformed\viewbinding-8.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.material:material:1.8.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\270bd4bc5bd7500e0b7d582609e13ee2\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b9fec61b2957d6bfe8adb0d44572ddaf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:3.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\434f33ea8803350a5e37d5ed93396e4d\transformed\lottie-3.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\74e35b4ecfedce372329ca2caff29441\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7da6f43310809f193642bcd432c58c1b\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:17:1-73:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\81934abec64b982462cba44e92390da5\transformed\lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9e5b3af4475642dfd5a7f976d0fc25\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7250a60daf400b2271f7c00fac5fc228\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.browser:browser:1.5.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3808961f3a11332edb4ef6e890aa33fe\transformed\browser-1.5.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\17ca4d955e726ca18618b8005f4f5574\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9f8ffbc1c6cc8486809aba2e30732a\transformed\firebase-appcheck-interop-16.1.0\AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3f9392eee440d4fa835c935bc0c04723\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fe77abdaac6239848d114cdfbd42cf5a\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1cba2179c77a1b157095addd2858e61\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e0d3f3b363d5ad9edbef4c76e790a35d\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\63b14790c77efec27003a3e7b8650e63\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\27d91fb54cf14802acbe8090dd4f6c91\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8e303d01035de9eab02dcc2895bde797\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\f484b0cfd2eac1fcf334082178e4c3ca\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee70800001431b4b9d164ca9ce11ce4d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c514175fc449a78ef8a27d19086a6fb3\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2d061081d22a93fd9b33e93dee3fa1cf\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6b3f86c9e7df896f64aae1a6b5718952\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1d9b4b414179098c35d52057ee1643ba\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\dbc7e895c66e7611c1cfb6d750be1ccb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bc4023c2b971b6bfb948ff58f9069974\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\d654ff9c8c877d43a2e3442c7a305323\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1410d2937433d30b3350e2e867734f59\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6c59bd2d47842a2bc530306de067664d\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14ab2d17b81a04825d40e2bc722d5457\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cf3abd8b36e838e1a5f6e7e6a91cf486\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7b91eabe84b607dd6ea8a689a0f48587\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\733c829d0482f9bd344000232e8a9437\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5e8233f45a08aa83c498bae530036152\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\77d25edb59578ed9111f1bb65ddd2905\transformed\lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\389b23c7a83207bd3787f7b27543fb44\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cc373a37a2e762afb99bc731c9e9ee87\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\9b74742880350db167990ca1637e002d\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee04e452d28dd85fc7bfcf72a43ea246\transformed\firebase-components-17.0.1\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b501aa5ad3dd92514da1c096ecf79a2f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1348622925b98d2e5e4137a81a533bb\transformed\sqlite-framework-2.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8a073ffd04ef89bda00a58f99422d09e\transformed\sqlite-2.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2c9ec0e2d98cb4b191e6b9d8784c4109\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14dcf65caafc0ca113889526d26351a0\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\793d827d24cf263694c9e35385b56eaa\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\379a255c5a8f51e8327487fb73fce644\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ed8bbd6a8f39c523f059e965f57963b6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ad17cf658c0dae542840d936d45f7d5d\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fc71178929aa9e8dc8414368034614f5\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fb0faa811376584a8e3cbb7c571afc52\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ec1f6268adaf717a5d8a7cc14d1ab90a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\771428b383066a65b02e8a6d3180f849\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+	package
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:1-64:12
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:5:5-66
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:5:22-64
+application
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:7:5-62:19
+MERGED from [com.google.android.material:material:1.8.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\270bd4bc5bd7500e0b7d582609e13ee2\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\270bd4bc5bd7500e0b7d582609e13ee2\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b9fec61b2957d6bfe8adb0d44572ddaf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b9fec61b2957d6bfe8adb0d44572ddaf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\434f33ea8803350a5e37d5ed93396e4d\transformed\lottie-3.4.0\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\434f33ea8803350a5e37d5ed93396e4d\transformed\lottie-3.4.0\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:26:5-71:19
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:26:5-71:19
+MERGED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7250a60daf400b2271f7c00fac5fc228\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7250a60daf400b2271f7c00fac5fc228\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9f8ffbc1c6cc8486809aba2e30732a\transformed\firebase-appcheck-interop-16.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9f8ffbc1c6cc8486809aba2e30732a\transformed\firebase-appcheck-interop-16.1.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1cba2179c77a1b157095addd2858e61\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1cba2179c77a1b157095addd2858e61\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e0d3f3b363d5ad9edbef4c76e790a35d\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e0d3f3b363d5ad9edbef4c76e790a35d\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\63b14790c77efec27003a3e7b8650e63\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\63b14790c77efec27003a3e7b8650e63\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ed8bbd6a8f39c523f059e965f57963b6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ed8bbd6a8f39c523f059e965f57963b6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:12:9-41
+	android:fullBackupContent
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:10:9-54
+	tools:targetApi
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:15:9-29
+	android:icon
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:8:9-36
+	android:theme
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:14:9-53
+	android:dataExtractionRules
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:9:9-65
+activity#com.example.cardiacrecorder.AdderActivity
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:17:9-22:55
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:20:13-49
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:19:13-37
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:21:13-53
+	android:theme
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:22:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:18:13-42
+activity#com.example.cardiacrecorder.FrontPage
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:24:9-35:20
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:28:13-49
+	android:noHistory
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:27:13-37
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:26:13-36
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:29:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:25:13-38
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:33:27-74
+activity#com.example.cardiacrecorder.HomePage
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:37:9-41:55
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:40:13-49
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:39:13-37
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:41:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:38:13-37
+activity#com.example.cardiacrecorder.LoginActivity
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:43:9-47:55
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:46:13-49
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:45:13-37
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:47:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:44:13-42
+activity#com.example.cardiacrecorder.OTPActivity
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:49:9-53:55
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:52:13-49
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:51:13-37
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:53:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:50:13-40
+activity#com.example.cardiacrecorder.DetailsPage
+ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:55:9-60:55
+	android:screenOrientation
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:58:13-49
+	android:exported
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:57:13-37
+	tools:ignore
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:59:13-53
+	android:theme
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:60:13-53
+	android:name
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml:56:13-40
+uses-sdk
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\a963792592080ec8c5e51ec6bd1fcf96\transformed\viewbinding-8.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\a963792592080ec8c5e51ec6bd1fcf96\transformed\viewbinding-8.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.8.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\270bd4bc5bd7500e0b7d582609e13ee2\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\270bd4bc5bd7500e0b7d582609e13ee2\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b9fec61b2957d6bfe8adb0d44572ddaf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b9fec61b2957d6bfe8adb0d44572ddaf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\434f33ea8803350a5e37d5ed93396e4d\transformed\lottie-3.4.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\434f33ea8803350a5e37d5ed93396e4d\transformed\lottie-3.4.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\74e35b4ecfedce372329ca2caff29441\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\74e35b4ecfedce372329ca2caff29441\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7da6f43310809f193642bcd432c58c1b\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7da6f43310809f193642bcd432c58c1b\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\81934abec64b982462cba44e92390da5\transformed\lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\81934abec64b982462cba44e92390da5\transformed\lifecycle-livedata-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9e5b3af4475642dfd5a7f976d0fc25\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9e5b3af4475642dfd5a7f976d0fc25\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7250a60daf400b2271f7c00fac5fc228\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7250a60daf400b2271f7c00fac5fc228\transformed\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.5.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3808961f3a11332edb4ef6e890aa33fe\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.5.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3808961f3a11332edb4ef6e890aa33fe\transformed\browser-1.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\17ca4d955e726ca18618b8005f4f5574\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\17ca4d955e726ca18618b8005f4f5574\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9f8ffbc1c6cc8486809aba2e30732a\transformed\firebase-appcheck-interop-16.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\af9f8ffbc1c6cc8486809aba2e30732a\transformed\firebase-appcheck-interop-16.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3f9392eee440d4fa835c935bc0c04723\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\3f9392eee440d4fa835c935bc0c04723\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fe77abdaac6239848d114cdfbd42cf5a\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fe77abdaac6239848d114cdfbd42cf5a\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1cba2179c77a1b157095addd2858e61\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1cba2179c77a1b157095addd2858e61\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e0d3f3b363d5ad9edbef4c76e790a35d\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e0d3f3b363d5ad9edbef4c76e790a35d\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\63b14790c77efec27003a3e7b8650e63\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\63b14790c77efec27003a3e7b8650e63\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\27d91fb54cf14802acbe8090dd4f6c91\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\27d91fb54cf14802acbe8090dd4f6c91\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8e303d01035de9eab02dcc2895bde797\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8e303d01035de9eab02dcc2895bde797\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\f484b0cfd2eac1fcf334082178e4c3ca\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\f484b0cfd2eac1fcf334082178e4c3ca\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee70800001431b4b9d164ca9ce11ce4d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee70800001431b4b9d164ca9ce11ce4d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c514175fc449a78ef8a27d19086a6fb3\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c514175fc449a78ef8a27d19086a6fb3\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2d061081d22a93fd9b33e93dee3fa1cf\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2d061081d22a93fd9b33e93dee3fa1cf\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6b3f86c9e7df896f64aae1a6b5718952\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6b3f86c9e7df896f64aae1a6b5718952\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1d9b4b414179098c35d52057ee1643ba\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1d9b4b414179098c35d52057ee1643ba\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\dbc7e895c66e7611c1cfb6d750be1ccb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\dbc7e895c66e7611c1cfb6d750be1ccb\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bc4023c2b971b6bfb948ff58f9069974\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bc4023c2b971b6bfb948ff58f9069974\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\d654ff9c8c877d43a2e3442c7a305323\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\d654ff9c8c877d43a2e3442c7a305323\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1410d2937433d30b3350e2e867734f59\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1410d2937433d30b3350e2e867734f59\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6c59bd2d47842a2bc530306de067664d\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\6c59bd2d47842a2bc530306de067664d\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14ab2d17b81a04825d40e2bc722d5457\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14ab2d17b81a04825d40e2bc722d5457\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cf3abd8b36e838e1a5f6e7e6a91cf486\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cf3abd8b36e838e1a5f6e7e6a91cf486\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7b91eabe84b607dd6ea8a689a0f48587\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\7b91eabe84b607dd6ea8a689a0f48587\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\733c829d0482f9bd344000232e8a9437\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\733c829d0482f9bd344000232e8a9437\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5e8233f45a08aa83c498bae530036152\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5e8233f45a08aa83c498bae530036152\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\77d25edb59578ed9111f1bb65ddd2905\transformed\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\77d25edb59578ed9111f1bb65ddd2905\transformed\lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\389b23c7a83207bd3787f7b27543fb44\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\389b23c7a83207bd3787f7b27543fb44\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cc373a37a2e762afb99bc731c9e9ee87\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\cc373a37a2e762afb99bc731c9e9ee87\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\9b74742880350db167990ca1637e002d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\9b74742880350db167990ca1637e002d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee04e452d28dd85fc7bfcf72a43ea246\transformed\firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ee04e452d28dd85fc7bfcf72a43ea246\transformed\firebase-components-17.0.1\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b501aa5ad3dd92514da1c096ecf79a2f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b501aa5ad3dd92514da1c096ecf79a2f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1348622925b98d2e5e4137a81a533bb\transformed\sqlite-framework-2.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\b1348622925b98d2e5e4137a81a533bb\transformed\sqlite-framework-2.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8a073ffd04ef89bda00a58f99422d09e\transformed\sqlite-2.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.3.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\8a073ffd04ef89bda00a58f99422d09e\transformed\sqlite-2.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2c9ec0e2d98cb4b191e6b9d8784c4109\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\2c9ec0e2d98cb4b191e6b9d8784c4109\transformed\lifecycle-livedata-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14dcf65caafc0ca113889526d26351a0\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\14dcf65caafc0ca113889526d26351a0\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\793d827d24cf263694c9e35385b56eaa\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\793d827d24cf263694c9e35385b56eaa\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\379a255c5a8f51e8327487fb73fce644\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\379a255c5a8f51e8327487fb73fce644\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ed8bbd6a8f39c523f059e965f57963b6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ed8bbd6a8f39c523f059e965f57963b6\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ad17cf658c0dae542840d936d45f7d5d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ad17cf658c0dae542840d936d45f7d5d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fc71178929aa9e8dc8414368034614f5\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fc71178929aa9e8dc8414368034614f5\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fb0faa811376584a8e3cbb7c571afc52\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\fb0faa811376584a8e3cbb7c571afc52\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ec1f6268adaf717a5d8a7cc14d1ab90a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\ec1f6268adaf717a5d8a7cc14d1ab90a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\771428b383066a65b02e8a6d3180f849\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\771428b383066a65b02e8a6d3180f849\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		ADDED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\Projects\CardiacRecorder\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:24:22-76
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
+MERGED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:64:9-70:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:30:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:29:13-84
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c98fce6fc299c0d5418e0eb0f1b249dc\transformed\firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:34:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:36:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:37:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:39:17-42:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:41:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:40:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:42:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:21.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c6fb36fa76e6e0a930c194fa748d01b8\transformed\firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.5.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\72b25a9df2d0cb47089e82fcb9af09b3\transformed\room-runtime-2.5.1\AndroidManifest.xml:25:13-74
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\c9fe87b63d9de461e1adc02a43fddac8\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\0607b4c8157a9aef90f54456e970c5c1\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\1b85e52a16b2910bb9f263a005b41935\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\e2134f0cdb2974fc108a739d8c509b79\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bec68125f50d7f832f9179c410973ad1\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+permission#com.example.cardiacrecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.cardiacrecorder.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\5343c53896619bdcaa0eb3013a1810d1\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] D:\Android\.jdks\openjdk-18.0.1.1\caches\transforms-3\bca37bf206c469be5afbc315333fb89a\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78

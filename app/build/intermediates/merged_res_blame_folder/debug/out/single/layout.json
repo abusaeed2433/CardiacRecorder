@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/custom_progress_bar.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/custom_progress_bar.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/each_data_layout_new.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/each_data_layout_new.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_otp.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_otp.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_details.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_details.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/filter_option_full.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/filter_option_full.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_login.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/single_option.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/single_option.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_front_page.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_front_page.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_adder.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_adder.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/each_data_layout.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/each_data_layout.xml"
+    },
+    {
+        "merged": "com.example.cardiacrecorder.app-mergeDebugResources-40:/layout/activity_homepage.xml",
+        "source": "com.example.cardiacrecorder.app-main-43:/layout/activity_homepage.xml"
+    }
+]

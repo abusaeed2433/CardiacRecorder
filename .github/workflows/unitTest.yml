@@ -1,0 +1,29 @@
+name: Unit Test
+run-name: ${{ github.actor }} running all test...
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    #Load code into ubuntu for further operation
+      - name: Set up code.
+        uses: actions/checkout@v3
+        
+    #Setting up jdk for building app with java version
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: adopt
+
+    #Making gradlew executable so that it can be used as terminal command
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+    #Command for running all test through terminal
+      - name: Unit Test
+        run: ./gradlew test

@@ -109,7 +109,7 @@ public class UiTest {
 
         onView(withId(R.id.rvList)).perform(RecyclerViewActions.actionOnItemAtPosition(index, click()));
 
-        onView(withId(R.id.DetailsSysPressure)).check(matches(isDisplayed()));
+        onView(withId(R.id.tvSysPressure)).check(matches(isDisplayed()));
 
         onView(withText(SYS +"mm Hg")).check(matches(isDisplayed()));
         onView(withText(DYS +"mm Hg")).check(matches(isDisplayed()));
